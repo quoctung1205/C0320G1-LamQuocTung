@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Hello</title>
+    </head>
+    <body>
+     <label>Amount</label>
+     <input id="amount1" type="text">
+     <br>
+     <lable> From Currency</lable>
+     <select id="fromcurrency1">
+         <option value="VietNam">Việt Nam</option>
+         <option value="USD">USD</option>
+         <option value="Euro">Euro</option>
+     </select>
+     <br>
+     <label>To Currency</label>
+     <select id="tocurrency1">
+         <option value="VietNam">Việt Nam</option>
+         <option value="USD">USD</option>
+         <option value="Euro">Euro</option>
+     </select>
+     <br>
+     <button type="button" onclick=" convert()">Submit</button>
+     <script>
+         function convert()
+         {
+             let amount=document.getElementById("amount1").value;
+             let fromcur=document.getElementById("fromcurrency1").value;
+             let tocur=document.getElementById("tocurrency1").value;
+         
+             if (fromcur==="USD" && tocur==="VietNam")
+             {document.write("Quy đổi:" +amount*23000);}
+             else if (fromcur==="VietNam" && tocur==="USD")
+             {document.write("Quy đổi:" +amount/23000);}
+             else if (fromcur==="VietNam" && tocur==="Euro")
+             {document.write("Quy đổi:" +amount/25000);}
+             else if (fromcur==="USD" && tocur==="Euro")
+             {document.write("Quy đổi:" +amount*23000/25000);}
+             else if (fromcur==="Euro" && tocur==="USD")
+             {document.write("Quy đổi:" +amount*25000/23000);}
+             else if (fromcur==="Euro" && tocur==="VietNam")
+             {document.write("Quy đổi:" +amount*25000);}
+             else 
+             {document.write("Vui lòng nhập lại!!");}
+
+        }
+     </script>
+    </body>
+</html>
