@@ -7,11 +7,11 @@
     <body>
         <form>
             <input id="soNgay12" type="text">
-            <button type="button" value="Click Me" />
+            <input type="button" value="Click Me" onclick="tinhtoan()">
         </form>
     <script>
+        function tinhtoan(){
         let soNgay12 = document.getElementById("soNgay12").value;
-        soNgay12 = parseInt(soNgay12);
         switch(soNgay12){
             case "1": 
                 alert("Tháng 1 có 31 ngày", '');
@@ -50,7 +50,7 @@
                 alert("Tháng 12 có 31 ngày", '');
                 break;
         }
-            
+    }
     </script>
     </body>
 </html>
