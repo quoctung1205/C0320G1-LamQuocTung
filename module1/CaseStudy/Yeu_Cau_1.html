@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Hello</title>
+    </head>
+    <body>
+        <form>
+            Nhập Họ và Tên:
+            <input id="name" type="text">
+            <br>
+            Nhập Số CMND:
+            <input id="cmnd" type="text">
+            <br>
+            Nhập Ngày/Tháng/Năm sinh:
+            <input id="birthDay" type="text">
+            <br>
+            Nhập địa chỉ Email:
+            <input id="email" type="text">
+            <br>
+            Nhập địa chỉ thường trú:
+            <input id="adress" type="text">
+            <br>
+            Loại customer:
+            <select id="typeCustomer">
+                <option value="Diamond">Diamond</option>
+                <option value="Platinum">Platinum</option>
+                <option value="Gold">Gold</option>
+                <option value="Silver">Silver</option>
+                <option value="Member">Member</option>
+            </select>
+            <br>
+            Mức giảm giá:
+            <input id="sale" type="text">
+            <br>
+            Số lượng đi kèm:
+            <input id="amount" type="text">
+            <br>
+            Số ngày thuê:
+            <input id="rentDays" type="text">
+            <br>
+            Loại hình dịch vụ:
+            <select id="typeService">
+                <option value="Villa">Villa</option>
+                <option value="House">House</option>
+                <option value="Room">Room</option>
+            </select>
+            <br>
+            Loại phòng thuê:
+            <select id="typeRoom">
+                <option value="VIP">VIP</option>
+                <option value="Business">Business</option>
+                <option value="Normal">Normal</option>
+            </select>
+            <br>
+            <button type="button" onclick="khaibao()">Submit!</button>
+        </form>
+        <script>
+            
+            function khaibao(){
+            let name=document.getElementById("name").value;
+            let cmnd = document.getElementById("cmnd").value;
+            let birthDate = document.getElementById("birthDay").value;
+            let email = document.getElementById("email").value;
+            let adress = document.getElementById("adress").value;
+            let typeCustomer = document.getElementById("typeCustomer").value;
+            let sale = document.getElementById("sale").value;
+            let amount = document.getElementById("amount").value;
+            let rentDays = document.getElementById("rentDays").value;
+            let typeService = document.getElementById("typeService").value;
+            let typeRoom = document.getElementById("typeRoom").value;
+                alert(
+                `Họ và tên: ${name}
+                Số cmnd: ${cmnd}
+                Ngày sinh nhật: ${birthDate}
+                Địa chỉ email: ${email}
+                Địa chỉ thường trú: ${adress} 
+                Loại khách hàng: ${typeCustomer}
+                Giảm giá: ${sale}
+                Số lượng: ${amount} 
+                Số ngày thuê: ${rentDays}
+                Loại hình dịch vụ: ${typeService}
+                Loại phòng: ${typeRoom}`
+            );
+            }
+        </script>
+    </body>
+</html>

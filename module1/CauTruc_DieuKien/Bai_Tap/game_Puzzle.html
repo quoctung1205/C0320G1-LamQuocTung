@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Hello</title>
+    </head>
+    <body>
+        <img src="../Bai_Tap/fenyr_Image/fenyrA/FernyA1.jpg" onclick="chuyenhinh(1)" id="hinh1">
+        <img src="../Bai_Tap/fenyr_Image/fenyrA/FernyA2.jpg" onclick="chuyenhinh(2)" id="hinh2">
+        <img src="../Bai_Tap/fenyr_Image/fenyrA/FernyA3.jpg" onclick="chuyenhinh(3)" id="hinh3">
+        <img src="../Bai_Tap/fenyr_Image/fenyrA/FernyA4.jpg" onclick="chuyenhinh(4)" id="hinh4">
+        <img src="../Bai_Tap/fenyr_Image/fenyrA/FernyA5.jpg" onclick="chuyenhinh(5)" id="hinh5">
+    <script>
+        let hinh1 = document.getElementById("hinh1");
+        let hinh2 = document.getElementById("hinh2");
+        let hinh3 = document.getElementById("hinh3");
+        let hinh4 = document.getElementById("hinh4");
+        let hinh5 = document.getElementById("hinh5");
+        function chuyenhinh(number){
+            switch (number){
+                case 1: 
+                if(hinh1.getAttribute('src')==="../Bai_Tap/fenyr_Image/fenyrA/FernyA1.jpg" ){
+                    hinh1.src = "../Bai_Tap/fenyr_Image/fenyrB/FernyB1.jpg"; 
+                }else if(hinh1.getAttribute('src')==="../Bai_Tap/fenyr_Image/fenyrB/FernyB1.jpg"){
+                    hinh1.src = "../Bai_Tap/fenyr_Image/fenyrC/FernyC1.jpg";
+                }else if(hinh1.getAttribute('src')==="../Bai_Tap/fenyr_Image/fenyrC/FernyC1.jpg"){
+                    hinh1.src = "../Bai_Tap/fenyr_Image/fenyrA/FernyA1.jpg";
+                }
+                break;
+                case 2: 
+                if(hinh2.getAttribute('src')==="../Bai_Tap/fenyr_Image/fenyrA/FernyA2.jpg" ){
+                    hinh2.src = "../Bai_Tap/fenyr_Image/fenyrB/FernyB2.jpg"; 
+                }else if(hinh2.getAttribute('src')==="../Bai_Tap/fenyr_Image/fenyrB/FernyB2.jpg"){
+                    hinh2.src = "../Bai_Tap/fenyr_Image/fenyrC/FernyC2.jpg";
+                }else if(hinh2.getAttribute('src')==="../Bai_Tap/fenyr_Image/fenyrC/FernyC2.jpg"){
+                    hinh2.src = "../Bai_Tap/fenyr_Image/fenyrA/FernyA2.jpg";
+                }
+                break;
+                case 3: 
+                if(hinh3.getAttribute('src')==="../Bai_Tap/fenyr_Image/fenyrA/FernyA3.jpg" ){
+                    hinh3.src = "../Bai_Tap/fenyr_Image/fenyrB/FernyB3.jpg"; 
+                }else if(hinh3.getAttribute('src')==="../Bai_Tap/fenyr_Image/fenyrB/FernyB3.jpg"){
+                    hinh3.src = "../Bai_Tap/fenyr_Image/fenyrC/FernyC3.jpg";
+                }else if(hinh3.getAttribute('src')==="../Bai_Tap/fenyr_Image/fenyrC/FernyC3.jpg"){
+                    hinh3.src = "../Bai_Tap/fenyr_Image/fenyrA/FernyA3.jpg";
+                }
+                break;
+                case 4: 
+                if(hinh4.getAttribute('src')==="../Bai_Tap/fenyr_Image/fenyrA/FernyA4.jpg" ){
+                    hinh4.src = "../Bai_Tap/fenyr_Image/fenyrB/FernyB4.jpg"; 
+                }else if(hinh4.getAttribute('src')==="../Bai_Tap/fenyr_Image/fenyrB/FernyB4.jpg"){
+                    hinh4.src = "../Bai_Tap/fenyr_Image/fenyrC/FernyC4.jpg";
+                }else if(hinh4.getAttribute('src')==="../Bai_Tap/fenyr_Image/fenyrC/FernyC4.jpg"){
+                    hinh4.src = "../Bai_Tap/fenyr_Image/fenyrA/FernyA4.jpg";
+                }
+                break;
+                case 5: 
+                if(hinh5.getAttribute('src')==="../Bai_Tap/fenyr_Image/fenyrA/FernyA5.jpg" ){
+                    hinh5.src = "../Bai_Tap/fenyr_Image/fenyrB/FernyB5.jpg"; 
+                }else if(hinh5.getAttribute('src')==="../Bai_Tap/fenyr_Image/fenyrB/FernyB5.jpg"){
+                    hinh5.src = "../Bai_Tap/fenyr_Image/fenyrC/FernyC5.jpg";
+                }else if(hinh5.getAttribute('src')==="../Bai_Tap/fenyr_Image/fenyrC/FernyC5.jpg"){
+                    hinh5.src = "../Bai_Tap/fenyr_Image/fenyrA/FernyA5.jpg";
+                }
+                break;    
+            }
+        if(hinh1.getAttribute('src')==="../Bai_Tap/fenyr_Image/fenyrA/FernyA1.jpg" 
+        && hinh2.getAttribute('src')==="../Bai_Tap/fenyr_Image/fenyrA/FernyA2.jpg" 
+        && hinh3.getAttribute('src')==="../Bai_Tap/fenyr_Image/fenyrA/FernyA3.jpg" 
+        && hinh4.getAttribute('src')==="../Bai_Tap/fenyr_Image/fenyrA/FernyA4.jpg" 
+        && hinh5.getAttribute('src')==="../Bai_Tap/fenyr_Image/fenyrA/FernyA5.jpg")
+        {
+            alert("Ghép đúng hình");
+        }else if(hinh1.getAttribute('src')==="../Bai_Tap/fenyr_Image/fenyrB/FernyB1.jpg" 
+        && hinh2.getAttribute('src')==="../Bai_Tap/fenyr_Image/fenyrB/FernyB2.jpg" 
+        && hinh3.getAttribute('src')==="../Bai_Tap/fenyr_Image/fenyrB/FernyB3.jpg" 
+        && hinh4.getAttribute('src')==="../Bai_Tap/fenyr_Image/fenyrB/FernyB4.jpg" 
+        && hinh5.getAttribute('src')==="../Bai_Tap/fenyr_Image/fenyrB/FernyB5.jpg")
+        {
+            alert("Ghép đúng hình");
+        }else if(hinh1.getAttribute('src')==="../Bai_Tap/fenyr_Image/fenyrC/FernyC1.jpg" 
+        && hinh2.getAttribute('src')==="../Bai_Tap/fenyr_Image/fenyrC/FernyC2.jpg" 
+        && hinh3.getAttribute('src')==="../Bai_Tap/fenyr_Image/fenyrC/FernyC3.jpg" 
+        && hinh4.getAttribute('src')==="../Bai_Tap/fenyr_Image/fenyrC/FernyC4.jpg" 
+        && hinh5.getAttribute('src')==="../Bai_Tap/fenyr_Image/fenyrC/FernyC5.jpg")
+        {
+            alert("Ghép đúng hình");
+        }
+        }
+    </script>
+    </body>
+</html>
