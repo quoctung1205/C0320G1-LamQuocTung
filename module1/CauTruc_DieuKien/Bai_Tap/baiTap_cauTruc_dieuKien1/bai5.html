@@ -1,22 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <title>Hello</title>
-    </head>
-    <body>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Hello</title>
+</head>
+
+<body>
     <script>
         let a = parseFloat(prompt("Mời nhập điểm bài kiểm tra:"));
         let b = parseFloat(prompt("Mời nhập điểm thi giữa kì:"));
         let c = parseFloat(prompt("Mời nhập điểm thi cuối kì:"));
-        let d = (a+b+c)/3
-         if (d > 7.5){
+        let d = (a + b + c) / 3;
+        if (d > 7.5) {
             alert("Học sinh Giỏi");
-        } else if (6.5 < d <= 7.5){
+        } else if (6.5 < d && d<= 7.5) {
             alert("Học sinh Khá");
-        }else if (4 < d <= 6.5){
+        } else if (4 < d &&  d<= 6.5) {
             alert("Học sinh Trung Bình");
-        } else alert("Học sinh yếu")
+        } else alert("Học sinh yếu");
     </script>
-    </body>
+</body>
+
 </html>

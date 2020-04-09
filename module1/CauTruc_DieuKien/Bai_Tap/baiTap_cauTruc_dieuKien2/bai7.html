@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Hello</title>
+</head>
+
+<body>
+    <script>
+        let a = parseFloat(prompt("Mời nhập hệ số a:"));
+        let b = parseFloat(prompt("Mời nhập hệ số b:"));
+        let c = parseFloat(prompt("Mời nhập hệ số c:"));
+        Delta = (b*b)-4*a*c;
+        if (a == 0){
+            alert("a khác 0, mời nhập lại a!");
+        }else if (Delta < 0){
+            alert("Phương trình vô nghiệm!");
+        }else if (Delta == 0){
+            x = (-b) / 2*a; 
+            alert("Phương trình có 2 nghiệm kép x=:" +x);
+        }else if (Delta > 0){
+            x1= ((-b) + Math.sqrt(Delta))/ (2 * a);
+            x2= ((-b) - Math.sqrt(Delta))/ (2 * a);
+            alert(`Phương trình có 2 nghiệm x1: ${x1}, x2: ${x2} `);
+        }
+    </script>
+</body>
+
+</html>

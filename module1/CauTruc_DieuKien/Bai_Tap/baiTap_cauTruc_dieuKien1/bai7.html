@@ -6,6 +6,20 @@
     </head>
     <body>
     <script>
+        let a = parseInt(prompt("Mời nhập số phút:"));
+        let b = 25000;
+        if(a <= 50){
+            let c = a * 600 + b;
+            alert("Số tiền cước cuộc gọi là:" + c);
+        }else if (50 < a && a<=200){
+            let d = a - 50;
+            let e = (d * 400) + (50 * 600) + b;
+            alert("Số tiền cước cuộc gọi là:" + e);
+        }else if (a > 200){
+            let f  = a - 200;
+            let g  = (f*200) + (600 * 50) + (400 * 150) + b;
+            alert("Số tiền cước cuộc gọi là:" + g);
+        }
     </script>
     </body>
 </html>
