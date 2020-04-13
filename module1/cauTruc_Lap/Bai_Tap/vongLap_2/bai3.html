@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Hello</title>
+</head>
+
+<body>
+    <script>
+        let a="";
+        for(i= 1; i<= 5;i++){
+            a = a + "*";
+            document.write(a);
+            document.write("<br>");
+        }document.write("<br>");
+        document.write("<br>");
+        document.write("<br>");
+        function renderTango1(number = 5) {
+            let currentNumber = number;
+            while (currentNumber) {
+                for (let i = 0; i < number - currentNumber; i++) {
+                    document.writeln("&nbsp");
+                }
+                for (let i = 0; i < currentNumber; i++) {
+                    document.write("*");
+                }
+                document.writeln("<br/>");
+                currentNumber--;
+            }
+        }
+        renderTango1()
+        document.write("<br>");
+        document.write("<br>");
+        document.write("<br>");
+        function renderTango2(number = 5) {
+            let currentNumber = number;
+            while (currentNumber) {
+                for (let i = 0; i < currentNumber; i++) {
+                    document.write("*");
+                }
+                for (let i = 0; i < number - currentNumber; i++) {
+                    document.writeln("&nbsp");
+                }
+                document.writeln("<br/>");
+                currentNumber--;
+            }
+        }
+        renderTango2()
+        document.write("<br>");
+        document.write("<br>");
+        document.write("<br>");
+        function renderTango3(number = 5) {
+            let currentNumber = number;
+            while (currentNumber) {
+                for (let i = 0; i < currentNumber; i++) {
+                    document.write("&nbsp&nbsp&nbsp");
+                }
+                for (let i = 0; i <= number - currentNumber; i++) {
+                    document.writeln("*");
+                }
+                document.writeln("<br/>");
+                currentNumber--;
+            }
+        }
+        renderTango3()
+    </script>
+</body>
+
+</html>

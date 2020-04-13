@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Hello</title>
+</head>
+
+<body>
+    <script>
+        function isPrime() {
+            let conditionStop = 2;
+            let a = 1;
+            let b = 1;
+            let temp;
+            document.write("1" + "<br>" + "1" + "<br>");
+            while (conditionStop < 20) {
+                temp = a + b;
+                b = a;
+                a = temp;
+                if (temp % 5 === 0) {
+                    alert("Số đầu tiên chia hết cho 5 là :" + temp);
+                    break;
+                }
+                conditionStop++;
+            }
+        }
+        isPrime();
+    </script>
+</body>
+
+</html>

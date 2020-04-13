@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Hello</title>
+</head>
+
+<body>
+    <script>
+        function isPrime() {
+            let conditionStop = 2;
+            let a = 1;
+            let b = 1;
+            let temp;
+            let sum;
+            while (conditionStop < 20) {
+                temp = a + b;
+                b = a;
+                a = temp;
+                sum += temp;
+                conditionStop++;
+            }document.write("Tổng là: " +(temp + 2));
+        }
+        isPrime();
+    </script>
+</body>
+
+</html>

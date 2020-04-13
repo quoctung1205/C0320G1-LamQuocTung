@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Hello</title>
+</head>
+
+<body>
+    <script>
+        /* function isPrime() {
+             let number = 7;
+             for(;number<=210;number++){
+                 if(number % 7 === 0){
+                     document.write(number);
+                     document.write("<br>");
+                 }
+             }
+         }
+         isPrime();*/
+        function isPrime() {
+            let conditionStop = 0;
+            let input = 7;
+            let sum = 0;
+            while (conditionStop < 30) {
+                if (input % 7 === 0) {
+                    sum+=input;
+                    input++;
+                    conditionStop++;
+                }
+                input++;
+            }document.write("Tổng là: " +sum);
+        }
+        isPrime();
+    </script>
+</body>
+
+</html>

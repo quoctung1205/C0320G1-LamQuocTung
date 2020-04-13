@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Hello</title>
+</head>
+
+<body>
+    <script>
+        function renderTango1(number = 5) {
+            let currentNumber = number;
+            while (currentNumber) {
+                for (let i = 0; i < currentNumber; i++) {
+                    document.write("&nbsp");
+                }
+                for (let i = 0; i <= number - currentNumber; i++) {
+                    document.writeln("*");
+                }
+                document.writeln("<br/>");
+                currentNumber--;
+            }
+        }
+        renderTango1()
+        function renderTango1(number = 5) {
+            let currentNumber = number;
+            while (currentNumber) {
+                for (let i = 0; i < currentNumber; i++) {
+                    document.write("&nbsp");
+                }
+                for (let i = 0; i <= number - currentNumber; i++) {
+                    document.writeln("*");
+                }
+                document.writeln("<br/>");
+                currentNumber--;
+            }
+        }
+        renderTango1()
+    </script>
+</body>
+
+</html>

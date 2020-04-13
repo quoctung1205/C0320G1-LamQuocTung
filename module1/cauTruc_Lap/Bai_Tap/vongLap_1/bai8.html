@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Hello</title>
+</head>
+    <button id="play" type="button" onclick="start()">Chơi!!</button>
+<body>
+    <script>
+        function start(){
+            let a = parseInt(prompt("Nhập a là khoảng đầu:"));
+            let b = parseInt(prompt("Nhập b là khoảng cuối:"));
+            let c = parseInt(prompt("Nhập c là số dự đoán sẽ xuất hiện trong khoảng từ a đến b:"));
+            let i = 1;
+            while (i> 0){
+                if (Math.floor(Math.random()* (b-a) + a)=== c){
+                    alert(Math.floor(Math.random()* (b-a) + a));
+                    alert("Chúc mừng");
+                    break;
+                }else if(Math.floor(Math.random()* (b-a) + a) != c){
+                    alert("Thua!!");
+                    i++;
+                    let c = parseInt(prompt("Nhập c là số dự đoán sẽ xuất hiện trong khoảng từ a đến b:"));
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>
