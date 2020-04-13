@@ -70,6 +70,53 @@
             let rentDays = document.getElementById("rentDays").value;
             let typeService = document.getElementById("typeService").value;
             let typeRoom = document.getElementById("typeRoom").value;
+            let amountAddress = document.getElementById("adress").value;
+            let amountTimes = document.getElementById("rentDays").value;
+            let amountCustomer = document.getElementById("typeCustomer").value;
+                while(amountAddress){
+                    let amountAddress1 = 0;
+                    if(amountAddress==="Đà Nẵng"){
+                        amountAddress1 = 20;
+                    }else if (amountAddress === "Huế"){
+                        amountAddress1 = 10;
+                    }else if (amountAddress === "Quảng Nam"){
+                        amountAddress1 = 5;
+                    }
+                }
+                while(amountTimes){
+                    let amountTimes1 = 0;
+                    if(amountTimes > 7){
+                        amountTimes1 = 30;
+                    }else if(5 <= amountTimes && amountTimes <= 7){
+                        amountTimes1 = 20;
+                    }else if(2 <= amountTimes && amountTimes <= 4){
+                        amountTimes1 = 10;
+                    }
+                }
+                while(amountCustomer){
+                    let amountCustomer1 =0;
+                    if(amountCustomer === "Diamond"){
+                        amountCustomer1 = 15;
+                    }else if(amountCustomer === "Platinum"){
+                        amountCustomer1 = 10;
+                    }else if(amountCustomer === "Gold"){
+                        amountCustomer1 = 5;
+                    }else if(amountCustomer === "Silver"){
+                        amountCustomer1 = 2;
+                    }else if(amountCustomer === "Member"){
+                        amountCustomer1 = 0;
+                    }
+                }
+                while(typeService){
+                    let typeService1 = 0;
+                }if(typeCustomer === "Villa"){
+                    typeService1 = 500;
+                }else if(typeCustomer === "House"){
+                    typeService1 = 300;
+                }else if(typeService === "Room"){
+                    typeService = 100;
+                }
+                let amountToPay = (typeService1 * rentDays) - (amountAddress1 + amountTimes1 + amountCustomer1)
                 document.write(
                 `Họ và tên: ${name} <br>
                 Số cmnd: ${cmnd} <br>
@@ -81,7 +128,8 @@
                 Số lượng: ${amount} <br>
                 Số ngày thuê: ${rentDays} <br>
                 Loại hình dịch vụ: ${typeService} <br>
-                Loại phòng: ${typeRoom}`
+                Loại phòng: ${typeRoom}
+                Giá tiền sau khi được giảm là: ${amountToPay}`
                 
             );
             }
