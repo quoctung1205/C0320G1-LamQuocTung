@@ -1,138 +1,156 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <title>Hello</title>
-    </head>
-    <body>
-        <form>
-            Nhập Họ và Tên:
-            <input id="name" type="text">
-            <br>
-            Nhập Số CMND:
-            <input id="cmnd" type="text">
-            <br>
-            Nhập Ngày/Tháng/Năm sinh:
-            <input id="birthDay" type="text">
-            <br>
-            Nhập địa chỉ Email:
-            <input id="email" type="text">
-            <br>
-            Nhập địa chỉ thường trú:
-            <input id="adress" type="text">
-            <br>
-            Loại customer:
-            <select id="typeCustomer">
-                <option value="Diamond">Diamond</option>
-                <option value="Platinum">Platinum</option>
-                <option value="Gold">Gold</option>
-                <option value="Silver">Silver</option>
-                <option value="Member">Member</option>
-            </select>
-            <br>
-            Mức giảm giá:
-            <input id="sale" type="text">
-            <br>
-            Số lượng đi kèm:
-            <input id="amount" type="text">
-            <br>
-            Số ngày thuê:
-            <input id="rentDays" type="text">
-            <br>
-            Loại hình dịch vụ:
-            <select id="typeService">
-                <option value="Villa">Villa</option>
-                <option value="House">House</option>
-                <option value="Room">Room</option>
-            </select>
-            <br>
-            Loại phòng thuê:
-            <select id="typeRoom">
-                <option value="VIP">VIP</option>
-                <option value="Business">Business</option>
-                <option value="Normal">Normal</option>
-            </select>
-            <br>
-            <button type="button" onclick="khaibao()">Submit!</button>
-            <button type="button" onclick="chinhSua()">Edit!</button>
-        </form>
-        <script>
-            
-            function khaibao(){
-            let name=document.getElementById("name").value;
-            let cmnd = document.getElementById("cmnd").value;
-            let birthDate = document.getElementById("birthDay").value;
-            let email = document.getElementById("email").value;
-            let adress = document.getElementById("adress").value;
-            let typeCustomer = document.getElementById("typeCustomer").value;
-            let sale = document.getElementById("sale").value;
-            let amount = document.getElementById("amount").value;
-            let rentDays = document.getElementById("rentDays").value;
-            let typeService = document.getElementById("typeService").value;
-            let typeRoom = document.getElementById("typeRoom").value;
-            let amountAddress = document.getElementById("adress").value;
-            let amountTimes = document.getElementById("rentDays").value;
-            let amountCustomer = document.getElementById("typeCustomer").value;
-                while(amountAddress){
-                    let amountAddress1 = 0;
-                    if(amountAddress==="Đà Nẵng"){
-                        amountAddress1 = 20;
-                    }else if (amountAddress === "Huế"){
-                        amountAddress1 = 10;
-                    }else if (amountAddress === "Quảng Nam"){
-                        amountAddress1 = 5;
-                    }
-                }
-                while(amountTimes){
-                    let amountTimes1 = 0;
-                    if(amountTimes > 7){
-                        amountTimes1 = 30;
-                    }else if(5 <= amountTimes && amountTimes <= 7){
-                        amountTimes1 = 20;
-                    }else if(2 <= amountTimes && amountTimes <= 4){
-                        amountTimes1 = 10;
-                    }
-                }
-                while(amountCustomer){
-                    let amountCustomer1 =0;
-                    if(amountCustomer === "Diamond"){
-                        amountCustomer1 = 15;
-                    }else if(amountCustomer === "Platinum"){
-                        amountCustomer1 = 10;
-                    }else if(amountCustomer === "Gold"){
-                        amountCustomer1 = 5;
-                    }else if(amountCustomer === "Silver"){
-                        amountCustomer1 = 2;
-                    }else if(amountCustomer === "Member"){
-                        amountCustomer1 = 0;
-                    }
-                }
-                while(typeService){
-                    let typeService1 = 0;
-                }if(typeCustomer === "Villa"){
-                    typeService1 = 500;
-                }else if(typeCustomer === "House"){
-                    typeService1 = 300;
-                }else if(typeService === "Room"){
-                    typeService = 100;
-                }
-                let amountToPay = (typeService1 * rentDays) - (amountAddress1 + amountTimes1 + amountCustomer1)
-                document.write(
-                `Họ và tên: ${name} <br>
-                Số cmnd: ${cmnd} <br>
-                Ngày sinh nhật: ${birthDate} <br>
-                Địa chỉ email: ${email} <br>
-                Địa chỉ thường trú: ${adress} <br>
-                Loại khách hàng: ${typeCustomer}<br>
-                Giảm giá: ${sale} <br>
-                Số lượng: ${amount} <br>
-                Số ngày thuê: ${rentDays} <br>
-                Loại hình dịch vụ: ${typeService} <br>
-                Loại phòng: ${typeRoom}
-                Giá tiền sau khi được giảm là: ${amountToPay}`
-                
-            );
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let name = "Tùng";
+        let cmnd = "01739038";
+        let email = "bighero6ts@gmail.com";
+        let adress = "Đà Nẵng";
+        let typeCustomer = "Diamond";
+        let discount = 10;
+        let quantityIncluded = 10;
+        let rentDays = 7;
+        let typeService = "Villa";
+        let typeRoom = "Vip";
+        let choose = parseInt(prompt("1.Hiển thị thông tin khách hàng." + "\n" +
+            "2.Chỉnh sửa thông tin khách hàng." + "\n" +
+            "3.Hiển thị giá sau khi được giảm giá."));
+        switch (choose) {
+            case 1: {
+                alert(
+                    "Tên: " + name + "\n"
+                    + "CMND: " + cmnd + "\n"
+                    + "Email: " + email + "\n"
+                    + "Địa chỉ: " + adress + "\n"
+                    + "Loại khách hàng: " + typeCustomer + "\n"
+                    + "Giảm giá: " + discount + "\n"
+                    + "Tổng số lượng: " + quantityIncluded + "\n"
+                    + "Số ngày thuê: " + rentDays + "\n"
+                    + "Loại dịch vụ: " + typeService + "\n"
+                    + "Loại phòng: " + typeRoom + "\n");
+                break;
             }
-        </script>
-    </body>
+
+            case 2: {
+                let chooseEdit = parseInt(prompt(
+                    "1.Tên: " + name + "\n"
+                    + "2.CMND: " + cmnd + "\n"
+                    + "3.Email: " + email + "\n"
+                    + "4.Địa chỉ: " + adress + "\n"
+                    + "5.Loại khách hàng: " + typeCustomer + "\n"
+                    + "6.Giảm giá: " + discount + "\n"
+                    + "7.Tổng số lượng: " + quantityIncluded + "\n"
+                    + "8.Số ngày thuê: " + rentDays + "\n"
+                    + "9.Loại dịch vụ: " + typeService + "\n"
+                    + "10.Loại phòng: " + typeRoom + "\n"));
+                    switch (chooseEdit){
+                        case 1: {
+                            name = prompt("Enter name: ");
+                            break;
+                        }
+                        case 2: {
+                            cmnd = prompt("Enter CMND: ");
+                            break;
+                        }
+                        case 3: {
+                            email = prompt("Enter Email: ");
+                            break;
+                        }
+                        case 4: {
+                            adress = prompt("Enter Address: ");
+                            break;
+                        }
+                        case 5: {
+                            typeCustomer =prompt("Enter Type Customer: ");
+                            break;
+                        }
+                        case 6:{
+                            discount = prompt("Enter discount: ");
+                            break;
+                        }
+                        case 7: {
+                            quantityIncluded = prompt("Enter Quantity Included: ");
+                            break;
+                        }
+                        case 8: {
+                            rentDays = prompt("Enter Rent Days");
+                            break;
+                        }
+                        case 9: {
+                            typeService = prompt("Enter Type Service");
+                            break;
+                        }
+                        case 10: {
+                            typeRoom = prompt("Enter Type Room: ");
+                            break;
+                        }
+                        default: {
+                            alert("Failed");
+                        }
+                    }
+                    alert(
+                    "Tên: " + name + "\n"
+                    + "CMND: " + cmnd + "\n"
+                    + "Email: " + email + "\n"
+                    + "Địa chỉ: " + adress + "\n"
+                    + "Loại khách hàng: " + typeCustomer + "\n"
+                    + "Giảm giá: " + discount + "\n"
+                    + "Tổng số lượng: " + quantityIncluded + "\n"
+                    + "Số ngày thuê: " + rentDays + "\n"
+                    + "Loại dịch vụ: " + typeService + "\n"
+                    + "Loại phòng: " + typeRoom + "\n");
+                    break;
+            }
+            case 3: {
+                let money =0;
+                if(typeService === "Villa"){
+                    money = 500;
+                }else if(typeService === "House"){
+                    money = 300;
+                }else if(typeService === "Room"){
+                    money = 100;
+                }
+                let temp =0;
+                if (adress === "Đà Nẵng"){
+                    temp += 20;
+                }else if(adress === "Huế"){
+                    temp += 10;
+                }else if(adress === "Quảng Nam"){
+                    temp += 5;
+                }
+                if(rentDays > 7){
+                    temp += 30;
+                }else if(rentDays >5){
+                    temp += 10;
+                }else if(rentDays>2){
+                    temp+=5;
+                }
+                else if(typeCustomer === "Diamond"){
+                    temp += 15;
+                }else if(typeCustomer === "Platinum"){
+                    temp += 10;
+                }else if(typeCustomer === "Gold"){
+                    temp += 5;
+                }else if(typeCustomer === "Silver"){
+                    temp += 2;
+                }else if(typeCustomer === "Member"){
+                    temp += 0;
+                }
+                alert("Total pay: "+(money*rentDays-temp));
+                break;
+            }
+            default:{
+                alert("Sự lựa chọn của bạn không có trong trình đơn!!");
+            }
+        }
+
+    </script>
+</body>
+
 </html>

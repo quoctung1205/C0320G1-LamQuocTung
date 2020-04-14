@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Hello</title>
+</head>
+
+<body>
+    <input id="findWord" type="text">
+    <button type="button" onclick="search()">SEARCH!</button>
+    <script>
+        let vietnamese = ["Xin Chào", "Tạm Biệt", "Khóc", "Cười"];
+        let english = ["Hello", "Good Bye", "Cry", "Smile"];
+        let findWord = document.getElementById("findWord");
+        let result = "";
+        function search() {
+            let str = findWord.value;
+            for (let x = 0; x < english.length; x++) {
+                 if (str === english[x]) {
+                        result = vietnamese[x];
+                    }
+                }document.write(result);
+            }
+    </script>
+</body>
+
+</html>

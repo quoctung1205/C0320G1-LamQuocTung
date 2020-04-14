@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Hello</title>
+</head>
+
+<body>
+    <script>
+        //bài 1
+        /*let myColor = ["Red","Green","White","Black"];
+        document.write(myColor);*/
+        //bài 2
+        /*let a = prompt("Nhập vào 1 số: ");
+        let str = a.toString();
+        let result = [str[0]];
+        for (let x =1; x < str.length; x++){
+            if(str[x-1]%2 == 0 && str[x]%2==0){
+                result.push('-', str[x]);
+            }else result.push(str[x]);
+        }
+        document.write(result.join(""));*/
+        //bài 3
+        let b = prompt("Nhập vào 1 chuỗi các từ:");
+        let str= b.toString();
+        var UPPER = ("ABCDEFGHIKLMNOPQRSTUVWXYZ");
+        var LOWER = ("abcdefghiklmnopqrstuvwxyz");
+        var result = [];
+        for(var x=0; x< str.length; x++){
+            if(UPPER.indexOf(str[x]) !== -1){
+                result.push(str[x].toLowerCase());
+            }else if(LOWER.indexOf(str[x]) !== -1){
+                result.push(str[x].toUpperCase());
+            }else result.push(str[x]);
+        }
+        document.write(result.join(""));
+    </script>
+</body>
+
+</html>

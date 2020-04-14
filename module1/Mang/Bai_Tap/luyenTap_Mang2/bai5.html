@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Hello</title>
+</head>
+
+<body>
+    <script>
+        let a = prompt("Nhập vào mảng a:");
+        let b = prompt("Nhập vào mảng b:");
+        let strA = a.toString();
+        let strB = b.toString();
+        let count =0;
+        for(i=0; i<b.length;i++){
+            for(j=0; j< a.length;j++){
+                if(b[i] === a[j]){
+                    count++;
+                }
+            }
+        }
+        if(count === b.length && count === a.length){
+            alert("2 mảng giống nhau")
+        }else alert("2 mảng không giống nhau");
+    </script>
+</body>
+
+</html>

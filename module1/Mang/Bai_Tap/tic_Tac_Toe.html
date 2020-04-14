@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Hello</title>
+</head>
+
+<body>
+    <h3>Caro Game Simple</h3>
+    <p id="caroGame"></p>
+    <input type="button" value="Change Value X" onclick="changeValueX()">
+    <input type="button" value="Change Value Y" onclick="changeValueY()">
+    <script>
+        let b = document.getElementById("caroGame");
+        let board = [];
+        let data = "";
+        for (i = 0; i < 5; i++) {
+            board[i] = new Array(" ."," ."," ."," ."," .");
+        }
+        for (let i = 0; i < 5; i++) {
+            data += "<br/>";
+            for (let j = 0; j < 5; j++) {
+                data += board[i][j] + "&nbsp;&nbsp;";
+            }
+        }
+        b.innerHTML = data;
+        function changeValueX() {
+            let positionA = prompt("A: ");
+            let positionB = prompt("B: ");
+            data = "";
+            board[positionA][positionB] = "x";
+            for (let i = 0; i < 5; i++) {
+                data += "<br/>"
+                for (let j = 0; j < 5; j++) {
+                    data += board[i][j] + "&nbsp;&nbsp;&nbsp;&nbsp";
+                }
+            }
+            data += "<br/><br/><input type='button' value='Change Value X' onclick='changeValueX()'>";
+            b.innerHTML = "<hr/>" + data;
+        }
+        function changeValueY() {
+            let positionC = prompt("C: ");
+            let positionD = prompt("D: ");
+            data = "";
+            board[positionC][positionD] = "0";
+            for (let i = 0; i < 5; i++) {
+                data += "<br/>"
+                for (let j = 0; j < 5; j++) {
+                    data += board[i][j] + "&nbsp;&nbsp;&nbsp;&nbsp";
+                }
+            }
+            data += "<br/><br/><input type='button' value='Change Value Y' onclick='changeValueY()'>";
+            b.innerHTML = "<hr/>" + data;
+        }
+        
+    </script>
+</body>
+
+</html>

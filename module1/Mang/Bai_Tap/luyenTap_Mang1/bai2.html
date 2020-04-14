@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Hello</title>
+</head>
+
+<body>
+    <script>
+        let a = [9,10,11,45,8,44,78,88,2,3];
+        let max = a[0];
+        let index = 0;
+        for(x =0; x< a.length; x++){
+            if(a[x] > max){
+                max = a[x];
+                index = x;
+            }
+        }
+        document.write("max = " +max + " found at " + index);
+    </script>
+</body>
+
+</html>
