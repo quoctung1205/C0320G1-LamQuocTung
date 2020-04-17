@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function IsValidAge(value) {
+            if (value.length == 0) {
+                return false;
+            }
+
+            var intValue = parseInt(value);
+            if (intValue == Number.NaN) {
+                return false;
+            }
+
+            if (intValue <= 0) {
+                return false;
+            }
+            return true;
+        }
+        alert(IsValidAge(-2));
+    </script>
+</body>
+
+</html>

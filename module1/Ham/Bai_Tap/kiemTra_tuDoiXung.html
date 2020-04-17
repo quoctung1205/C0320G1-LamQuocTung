@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function isPalindrome(s){
+            if(s.lenght <= 1){
+                return true;
+            }
+            if(s[0]===s[s.lenght-1]){
+                s=s.substring(1,s.lenght-1);
+                return isPalindrome(s);
+            }else {
+                return false;
+            }
+        }
+        alert(isPalindrome("abccba"));
+    </script>
+</body>
+</html>

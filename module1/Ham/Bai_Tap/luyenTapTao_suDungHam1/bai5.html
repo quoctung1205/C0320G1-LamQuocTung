@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let c = prompt("Nhập vào 1 chuỗi tên ngôi sao: ");
+        let ca = c.toString();
+        let a = ["Polaris", "Aldebaran","Deneb", "Vega", "Altair", "Dubhe" , "Regulus"];
+        let b = ["Ursa Minor", "Tarurus", "Cygnus", "Lyra", "Aquila", "Ursa Major" , "Leo"];
+        function findStar(){
+            for(i =0; i <a.length;i++){
+                let check = 0;
+                if(ca === a[i] || ca === b[i]){
+                    return true;
+                }
+            }
+            return false;
+        }
+        if (findStar() === true){
+            alert("Bạn đã nhập đúng " + ca);
+        }else {alert("Bạn đã nhập sai")}
+        console.log(findStar)
+    </script>
+</body>
+</html>

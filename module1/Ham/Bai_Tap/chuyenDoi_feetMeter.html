@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Hello</title>
+</head>
+
+<body>
+    <p>
+    <label>Meter</label>
+    <input id="inputMeter" type="number" placeholder="Feet"
+    oninput="convertUnit(this.value)"
+    onchange="convertUnit(this.value)">
+    </p>
+    <p>Feet: <span id="outputFeet"></span></p>
+    <script>
+        function convertUnit(valNum){
+            valNum= parseFloat(valNum);
+            document.getElementById("outputFeet").innerHTML= valNum * 3.279;
+        }
+    </script>
+</body>
+
+</html>

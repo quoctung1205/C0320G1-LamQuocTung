@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let arrProduct = ["Samsung","Nokia","Iphone"];
+        function displayProducts(){
+            document.body.innerHTML="";
+            let sout="<input type='text' id='product'> <button onclick='getProduct()'>ADD</button>";
+            sout+="<table>";
+            for(let i = 0; i< arrProduct.length;i++){
+                sout+="<tr>";
+                sout+="<td>" + arrProduct[i]+"</td>";
+                sout+="<td><button onclick ='editProduct("+i+")'>Edit</button></td>"; 
+                sout+="<td><button onclick ='deleteProduct("+i+")'>Delete</button></td>"; 
+                sout+="</tr>";
+            }
+            sout+="</table>";
+            document.write(sout);
+        }
+        function getProduct(){
+            let product = document.getElementById("product").value;
+            addProduct(product);
+        }
+        function addProduct(product){
+            arrProduct.push(product);
+            displayProducts();
+        }
+        function editProduct(index){
+            let product = prompt("Nhập tên sản phẩm để sửa: ");
+            arrProduct[index]=product;
+            displayProducts();
+        }
+        function deleteProduct(index){
+            if(confirm("Bạn có thực sự muốn xóa product " +arrProduct[index]+ " hay không?")){
+                arrProduct.splice(index,1)
+            }
+            displayProducts();
+        }
+        displayProducts();
+    </script>
+</body>
+</html>
