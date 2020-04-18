@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function temperature(Celcius){
+            this.Celcius= Celcius;
+            this.getC= () =>{
+                return this.Celcius;
+            }
+            this.getF = () => {
+                return (this.Celcius* 1.8) +32;
+            }
+            this.Kevin = () =>{
+                return this.Celcius + 273.15;
+            }  
+        }
+        let Temperature = new temperature(20);
+        let Ftemperature = Temperature.getF();
+        let kevinTemp = Temperature.Kevin();
+        console.log("Độ F : " + Ftemperature + " Độ K: " + kevinTemp); 
+    </script>
+</body>
+</html>

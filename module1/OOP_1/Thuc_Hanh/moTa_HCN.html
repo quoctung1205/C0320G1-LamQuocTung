@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <canvas id="myCanvas" width="500px" height="500px" style="border: 1px solid #d3d3d3;"></canvas>
+    <script>
+        function rectangle(lenght, width) {
+            this.length = lenght;
+            this.width = width;
+            this.getLenght = () => {
+                return lenght;
+            }
+            this.getWidth = () => {
+                return width;
+            }
+            this.perimeter = () => {
+                return (lenght + width) * 2;
+            }
+            this.area = () => {
+                return lenght * width;
+            }
+            this.art = () => {
+                let canvas = document.querySelector("#myCanvas");
+                let ctx = canvas.getContext("2d");
+                ctx.fillRect(20, 20, this.length, this.width);
+            }
+        }
+        let Rectangle = new rectangle(200, 200);
+        let lenght = Rectangle.getLenght();
+        let width = Rectangle.getWidth();
+        let Perimeter = Rectangle.perimeter();
+        let Area = Rectangle.area();
+        alert("Diện tích là: " + Area+ " Chu vi hình chữ nhật là: " + Perimeter);
+        Rectangle.art();
+    </script>
+</body>
+
+</html>

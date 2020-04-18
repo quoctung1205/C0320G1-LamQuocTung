@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function mobile(pin) {
+            if (pin > 100) {
+                return false;
+            }
+            this.pin = pin;
+            this.messageDraft = [];
+            this.messageInbox = [];
+            this.messageSent = [];
+            this.isOn = true;
+            this.getPin = () => {
+                this.loseBatery();
+                return this.pin;
+            }
+            this.getDraft = () => {
+                this.loseBatery();
+                return this.messageDraft;
+            }
+            this.getInbox = () => {
+                this.loseBatery();
+                return this.messageInbox;
+            }
+            this.getSent = () => {
+                this.loseBatery();
+                return this.messageSent;
+            }
+            this.checkOn = () => {
+                this.loseBatery();
+                return this.isOn;
+            }
+            this.powerOn = () => {
+                return this.isOn = true;
+            }
+            this.powerOff = () => {
+                return this.isOn = false;
+            }
+            this.charge = () => {
+                return this.pin = 100;
+            }
+            this.drafting = (message) => {
+                this.loseBatery();
+                return message ? this.messageDraft.push(message) : null;
+            }
+            this.receive = (message) => {
+                this.loseBatery();
+                return message ? this.messageInbox.push(message) : null;
+            }
+            this.sent = (message) => {
+                this.loseBatery();
+                return message ? this.messageSent.push(message) : null;
+            }
+            this.seenSent = (message) => {
+                this.loseBatery();
+                return this.messageSent;
+            }
+            this.seenDraft = (message) =>{
+                this.loseBatery();
+                return this.messageDraft;
+            }
+            this.seenInbox = (message) =>{
+                this.loseBatery();
+                return this.messageInbox;
+            }
+            this.loseBatery = () => {
+                if (!this.isOn) {
+                    alert("ĐMM bật điện thoại lên");
+                    return null;
+                }
+                if (this.pin - 1 === 0) {
+                    alert("ĐMM hết pin rồi")
+                    return this.powerOff();
+                }
+                return this.pin -= 1;
+            }
+
+        }let message = "Anh Yeu Em";
+        
+        
+    </script>
+</body>
+
+</html>
