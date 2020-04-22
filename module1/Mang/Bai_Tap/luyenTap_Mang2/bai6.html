@@ -11,8 +11,8 @@
         let a = prompt("Nhập vào mảng a:");
         let count = "_";
         for(i=0; i<a.length;i++){
-            if(a[i] === "-"){
-                a[i] = count;
+            if(a.charAt(i) === "-"){
+                a.charAt(i) += count;
             }
         }
         alert(a);

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function Human(name,gender,weightHM){
+            this.name = name;
+            this.gender = gender;
+            this.weightHM = weightHM;
+            let Male = true;
+            this.isMale = () => {
+                if(Male === true){
+                    console.log("Adam")
+                }
+                return Male = false;
+            }
+            this.setName = () => {
+                return name;
+            }
+            this.getName = () => {
+                return this.setName;
+            }
+            this.setGender = () => {
+                return gender;
+            }
+            this.setWeightHM = () => {
+                return weightHM;
+            }
+            this.getWeightHM = () => {
+                return this.setWeightHM;
+            }
+            this.talk = () => {
+                console.log("I Love You So Much")
+            }
+            this.eat = () => {
+                this.decrease();
+                return this.weightHM + 1;
+            }
+            
+        }
+        function Apple(weightAP){
+            this.checkWeight = true;
+            this.weightAP = weightAP;
+            this.getWeightAP = () => {
+                return weightAP;
+            }
+            this.decrease = () =>{
+                return this.weightAP - 1;
+            }
+            this.emty = () => {
+                if(this.weightAP === 0){
+                    return this.checkWeight = false;
+                }
+            }
+        }
+        var adamMale = new Human("Adam","Male",70);
+        var evaFemale = new Human("Eva","Female",50);
+        var apple = new Apple(10);
+    </script>
+</body>
+</html>
