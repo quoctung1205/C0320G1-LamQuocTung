@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function rat(nameM,weightM,speed,deadOrLive){
+            this.nameM= nameM;
+            this.weightM = weightM;
+            this.speed = speed;
+            this.getSpeed = () => {
+                return this.speed;
+            }
+            this.deadOrLive = deadOrLive;
+            this.isDead = () =>{
+                alert("Chuột đã hi sinh")
+                return this.deadOrLive = false;
+            }
+            this.squeak =() => {
+                alert("Chít chít")
+            }
+        }
+        function cat(nameC,weightC,maxSpeed){
+            this.nameC=nameC;
+            this.weightC = weightC;
+            this.maxSpeed = maxSpeed;
+            let count = 0;
+            this.miaow = () => {
+                alert("MEO MEO");
+            }
+            this.catchOut = (ratCatch) => {
+                if(ratCatch.getSpeed() < this.maxSpeed){
+                    count++;
+                    alert("Số lượng chuột đã bị bắt: " +count);
+                }else if(ratCatch.getSpeed() >= this.maxSpeed){
+                    alert("Số lượng chuột đã bị bắt: " +count);
+                }
+            }
+            this.eatRat = (ratCatch) => {
+                if(ratCatch.isDead() === true){
+                    this.weightC = this.weightC + ratCatch.weightM;
+                    alert("Khối lượng của mèo là: " + this.weightC);
+                    return ratCatch.isDead();
+                }
+            }
+        }let ratCatch = new rat("Jerry", 10, 200, true);
+        let Cat = new cat("Tom",20,300)
+    </script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let arrayNameCustomer = [];
+        while (true) {
+            choose = parseInt(prompt("1.add new customer" + "\n" + "2.Delete Customer"));
+            switch (choose) {
+                case 1: {
+                    let number = parseInt(prompt("Enter Number Customer you want add to arrive: "));
+                    for (let i = 0; i < number; i++) {
+                        let nameCustomer = prompt("Enter name of customer: ");
+                        arrayNameCustomer.push(nameCustomer);
+                    }
+                    let result = "";
+                    arrayNameCustomer.sort();
+                    for (let i = 0; i < arrayNameCustomer.length; i++) {
+                        result += (i + 1) + ". " + arrayNameCustomer[i] + "\n";
+                    }
+                    alert(result);
+                    break;
+                }
+                case 2:{
+                    let check = false;
+                    let nameCustomer = prompt("Enter customer you want delete: ");
+                    for(let i = 0;i<arrayNameCustomer.length;i++){
+                        if(arrayNameCustomer[i] === nameCustomer){
+                            arrayNameCustomer.splice(i,1);
+                            check = true;
+                        }
+                    }
+                    if(!check){
+                        alert("Thành phần muốn xóa không có")
+                    }
+                    let result = "";
+                    arrayNameCustomer.sort();
+                    for (let i = 0; i < arrayNameCustomer.length; i++) {
+                        result += (i + 1) + ". " + arrayNameCustomer[i] + "\n";
+                    }
+                    alert(result);
+                    break;
+                }
+                default: {
+                    alert("Failed");
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function remote(code){
+            this.code = code;
+            this.changeChannel = (number) =>{
+                this.code = number;
+                alert("Đã chuyển kênh" + this.code);
+            }
+            this.volumeUp = (Tivi) => {
+                Tivi.switchVolumeUp();
+            }
+            this.volumeDown = (Tivi) =>{
+                Tivi.switchVolumeDown();
+            }
+            this.turnOn = (Tivi) =>{
+                if(Tivi.onOrOff === false){
+                    alert("Đã bật tivi");
+                    return Tivi.onOrOff = true;
+                }
+                alert("Tivi đã bật sẵn")
+            }
+            this.turnOff = (Tivi) =>{
+                if(Tivi.onOrOff === true){
+                    alert("Đã tắt tivi");
+                    return Tivi.onOrOff = false;
+                }
+                alert("Tivi đã tắt sẵn")
+            }
+        }
+        function tivi(channel,volume,onOrOff,){
+            this.channel = channel;
+            this.volume = volume;
+            this.onOrOff = onOrOff;
+            this.switchChannelUp = () => {
+                this.channel++;
+                alert("Đã chuyển tới kênh " + this.channel);
+            }
+            this.switchChannelDown = () => {
+                this.channel--;
+                alert("Đã chuyển tới kênh " + this.channel)
+            }
+            this.switchVolumeUp = () => {
+                this.volume++;
+                alert("Đã tăng âm lượng " + this.volume)
+            }
+            this.switchVolumeDown = () => {
+                this.volume--;
+                alert("Đã giảm âm lượng " + this.volume);
+            }
+        }
+        let Remote = new remote(1);
+        let Tivi = new tivi(1,1,true);
+    </script>
+</body>
+</html>

@@ -1,32 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <script>
-        function swichButton(status,lamp) {
+        function swichButton(status, lamp) {
             this.status = status;
             this.lamp = lamp;
             this.switchOff = () => {
-                if(status === true){
-                    alert("Đèn đang bật");
-                    return status = false;
-                }alert("Đã tắt đèn");
+                if (this.status === true) {
+                    alert("Công tắt đã tắt");
+                    lamp.turnOff()
+                    return this.status = false;
+                } alert("Công tắt đã tắt")
             }
             this.switchOn = () => {
-                if(status === false){
-                    alert("Đèn đã tắt");
-                    return status = true;
-                }alert("Đã bật đèn");
+                if (this.status === false) {
+                    alert("Đã bật công tắt");
+                    lamp.turnOn()
+                    return this.status = true;
+                } alert("Đã bật công tắc");
+            }
+            this.conectToLamp = () => {
+                return this.lamp;
             }
         }
-        function electricLamp(statusL){
+        function electricLamp(statusL) {
             this.statusL = statusL;
-            thi
-        }
+            this.turnOff = () => {
+                if (this.statusL === true) {
+                    alert("Đèn đang tắt");
+                    return this.statusL = false;
+                }
+                alert("Đèn đang tắt");
+            }
+            this.turnOn = () => {
+                if (this.statusL === false) {
+                    alert("Đèn đang bật");
+                    return this.statusL = true;
+                }
+                alert("Đè đã bật");
+            }
+        } let lamp = new electricLamp(true);
+        let SwichButton = new swichButton(true, lamp);
     </script>
 </body>
+
 </html>
