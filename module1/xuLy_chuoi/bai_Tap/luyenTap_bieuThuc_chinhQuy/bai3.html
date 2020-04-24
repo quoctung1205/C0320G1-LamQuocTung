@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // nguyên âm 
+        let str = prompt("input string");
+        let result = /[aăâeêioôơuưy]/;
+        let count = 0;
+        for (let i = 0; i < str.length; i++) {
+            if (result.test(str.charAt(i))) {
+                count++;
+            }
+        }
+        alert("Nguyên âm" +count);
+        // phụ âm 
+        let str1 = prompt("input string");
+        let result1 = /[bcdđghklmnpqrstvx]/;
+        let count1 = 0;
+        for (let i = 0; i < str1.length; i++) {
+            if (result1.test(str1.charAt(i))) {
+                count1++;
+            }
+        }
+        alert("phụ âm" +count1);
+    </script>
+</body>
+</html>

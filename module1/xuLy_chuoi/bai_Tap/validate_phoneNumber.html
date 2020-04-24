@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        RegExp = /^[(]+[0-9]{2}[)]+[0-9]{10}/;
+        function phoneNumber(str){
+            RegExp = /^[(]+[0-9]{2}[)]+[0-9]{10}/;
+            if(RegExp.test(str)){
+                return true;
+            }
+            return false;
+        }
+        console.log(phoneNumber());
+    </script>
+</body>
+</html>
