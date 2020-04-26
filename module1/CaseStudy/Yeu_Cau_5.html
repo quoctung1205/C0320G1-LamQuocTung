@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let arrListCustomer = [];
+        function dislayMainMenu() {
+            let choose = parseInt(prompt("1.Add new customer" + "\n2display Infomation Customer"
+                + "\n3.Edit Infomation Customer" + "\n4.Delete Customer" + "\n5.Exit"))
+            switch (choose) {
+                case 1: {
+                    addNewCustomer();
+                    break;
+                }
+                case 2: {
+
+                }
+                case 3: {
+
+                }
+                case 4: {
+
+                }
+                case 5: {
+
+                }
+                default: {
+                    alert("Failed");
+                }
+            }
+        }
+        function addNewCustomer() {
+            let cusInfo = [];
+            let name = prompt("Input Name: ");
+            let birthDay = prompt("Input birthday: ");
+            let cmnd = prompt("Input CMND: ");
+            let email = prompt("Input Email: ");
+            let address = prompt("Input address: ");
+            let typeCustomer = prompt("Input type customer: ");
+            let discount = prompt("Input discount: ");
+            let quantityIncluded = prompt("Input Quantity Include: ");
+            let rentDays = prompt("Input rentdays: ");
+            let typeService = prompt("Input type service: ");
+            let typeRooms = prompt("Input type rooms: ");
+
+            cusInfo.push(name);
+            cusInfo.push(birthDay);
+            cusInfo.push(cmnd);
+            cusInfo.push(email);
+            cusInfo.push(address);
+            cusInfo.push(typeCustomer);
+            cusInfo.push(discount);
+            cusInfo.push(quantityIncluded);
+            cusInfo.push(rentDays);
+            cusInfo.push(typeService);
+            cusInfo.push(typeRooms);
+
+            arrListCustomer.push(cusInfo);
+            alert("Add successfull");
+            dislayMainMenu();
+        }
+
+        dislayMainMenu();
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var current = new Date();
+        let yearcurrent = current.getFullYear()
+
+        var birthday = prompt("Nhập vào ngày tháng năm sinh theo định dạng 'MM/dd/yyyy':", "05/12/1997");
+        let date1 = new Date(birthday)
+        birthday = date1.getFullYear();
+
+        let mmsc = current.getTime() - date1.getTime();
+        let second = mmsc/1000;
+        let minute = second/60;
+        let hours = minute/60;
+        let days = hours/24;
+        let month = days/30;
+        alert("Tuổi của bạn là: " + (yearcurrent - birthday)+ " năm");
+        alert("Tuổi của bạn là: " + month +" tháng");
+        alert("Tuổi của bạn là: " + days+ " ngày");
+        alert("Tuổi của bạn là: " + hours+ " giờ");
+        alert("Tuổi của bạn là: " + minute+ " phút");
+        alert("Tuổi của bạn là: " + second + " giây");
+        alert("Tuổi của bạn là: " + mmsc + " mili giây");
+    </script>
+</body>
+
+</html>
