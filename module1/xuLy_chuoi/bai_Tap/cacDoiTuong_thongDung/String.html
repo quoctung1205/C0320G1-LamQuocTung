@@ -1,21 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <script>
         let a = "Tôi yêu ngôn ngữ lập trình Javascript";
         let b = a.toString();
-        let count =0;
-        for(i=0;i<b.length;i++){
-            if(b[i] === "a"){
+        let count = 0;
+        let charCrr = ""
+        let rsArray = []
+
+        for (i = 0; i < b.length; i++) {
+            if (b[i] === "a") {
                 count++;
             }
         }
+
+        for (i = 0; i < b.length; i++) {
+            if (b[i] === " ") {
+                rsArray.push(charCrr)
+                charCrr = ''
+            } else if (i + 1 === b.length) {
+                rsArray.push(charCrr)
+            } else charCrr += b[i]
+        }
+        console.log(rsArray);
+        console.log(rsArray.length);
+        rsArray[rsArray.length -1]= "TypeScript";
+        console.log(rsArray.join(" "));
         alert(count);
     </script>
 </body>
+
 </html>

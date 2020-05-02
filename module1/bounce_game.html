@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+
+<body onload="docReady()">
+    <canvas id="myCanvas" width="500" height="500" style="border: 1px solid #d3d3d3"></canvas>
+    <script>
+        function ball(coordinateX, coordinateY, radius) {
+            this.coordinateX = coordinateX;
+            this.coordinateY = coordinateY;
+            this.radius = radius;
+            this.getRadius = () => {
+                return this.radius;
+            }
+            this.getCoordinateX = () => {
+                return this.coordinateX;
+            }
+            this.getCoordinateY = () => {
+                return this.getCoordinateY;
+            }
+            this.corner = () => {
+            }
+            this.speed = () => {
+
+            }
+            this.wayMoveUp = () => {
+                this.coordinateX += 5;
+            }
+            this.wayMoveDown = () =>{
+
+            }
+            this.impactBar = () => {
+
+            }
+        }
+        var circle = new ball(50, 50, 10);
+        var ctx = document.getElementById("myCanvas").getContext('2d');
+        function creatCircle() {
+            ctx.beginPath();
+            ctx.arc(circle.coordinateX, circle.coordinateY, circle.radius, 0, 2 * Math.PI);
+            ctx.fill();
+        }
+        creatCircle()
+        function clearCir(){
+            ctx.clearRect(circle.coordinateX,circle.coordinateY,circle.radius, 0 ,2 *Math.PI);
+        }
+        function bar(coordinateXBar, coordinateYBar,heightBar, wideBar) {
+            this.wideBar = wideBar;
+            this.heightBar = heightBar;
+            this.coordinateXBar = coordinateXBar;
+            this.coordinateYBar = coordinateYBar;
+            this.getHeightBar = () => {
+                return this.heightBar;
+            }
+            this.getWideBar = () => {
+                return this.wideBar;
+            }
+            this.getXBar = () => {
+                return this.coordinateXBar;
+            }
+            this.getYBar = () => {
+                return this.coordinateYBar;
+            }
+            this.moveLeft = () => {
+                clear();
+                console.log(this.heightBar);
+                this.coordinateXBar -= 5;
+                creatRectangle();
+            }
+            this.moveRight = () => {
+                clear();
+                console.log(this.heightBar);
+                this.coordinateXBar += 5;
+                creatRectangle();
+            }
+        }
+        var rectangle = new bar(180, 450, 150, 10);
+        var ctx = document.getElementById("myCanvas").getContext('2d');
+        function creatRectangle() {
+            ctx.rect(rectangle.coordinateXBar, rectangle.coordinateYBar, rectangle.heightBar, rectangle.wideBar);
+            ctx.fill();
+        }
+        creatRectangle();
+        function clear(){
+            ctx.clearRect(rectangle.coordinateXBar, rectangle.coordinateYBar, rectangle.heightBar, rectangle.wideBar);
+        }
+        function moveSelection(evt) {
+            switch (evt.keyCode) {
+                case 37: {
+                    rectangle.moveRight();
+                    break;
+                }
+                case 39: {
+                    rectangle.moveLeft();
+                    break;
+                }
+            }
+        }
+        function docReady() {
+            window.addEventListener('keydown', moveSelection);
+        }
+    </script>
+</body>
+
+</html>

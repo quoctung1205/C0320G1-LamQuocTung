@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <button onclick="displayMenu()">show menu</button>
+    </div>
+    <script>
+        let appInfo = [];
+        function displayMenu() {
+            let App = parseInt(prompt("1.Show product" + "\n" + "2.Add product" + "\n"
+                + "3.Edit product" + "\n" + "4.Delete Product"))
+            switch (App) {
+                case 1: {
+                    for (let i = 0; i < appInfo.length; i++) {
+                        console.log(`Name of Product: ${appInfo[i].name}
+                Info of Product: ${appInfo[i].info}`);
+                    }
+                    break;
+                }
+                case 2: {
+                    addProduct();
+                    break;
+                }
+                case 3: {
+                    editProduct();
+                    break;
+                }
+                default: {
+                    alert("Failed")
+                }
+            }
+            function editProduct() {
+                for(i=0;i<appInfo.length;i++){
+                    
+                }
+            }
+            function addProduct() {
+                let name = prompt("add name product: ");
+                let info = prompt("add info product: ");
+                appInfo.push({
+                    name: name,
+                    info: info
+                });
+                alert("add success");
+                console.log(appInfo);
+            }
+        }
+        displayMenu()
+    </script>
+</body>
+
+</html>

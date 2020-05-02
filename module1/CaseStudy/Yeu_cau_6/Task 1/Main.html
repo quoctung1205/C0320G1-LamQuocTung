@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="customer.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let regexEmail = /\S+@\S+\.\S+/;
+        let regexBirthday = /^\d{2}[./-]\d{2}[./-]\d{4}$/;
+        let regexCmnd = /^[\d]{8,8}$/;
+        let regexNumber = /^\d+$/;
+        let listCustomer = [];
+        let cmnd;
+        let birthDay;
+        let discount;
+        let quantityIncluded;
+        let rentdays;
+        function displayMainMenu() {
+            let choose = parseInt(prompt("1.Add new customer" + "\n2display Infomation Customer"
+                + "\n3.Display TotalPay Customer" + "\n4.Edit Infomation Customer" + "\n5.Delete Customer" + "\n6.Exit"));
+            switch (choose) {
+                case 1: {
+                    addNewCustomer();
+                    break;
+                }
+                case 3: {
+                    displayTotalPays();
+                    break;
+                }
+                default: {
+                    alert("Failed")
+                }
+            }
+        }
+        function displayTotalPays(){
+            let temp = "";
+            for (let i = 0; i < listCustomer.length; i++) {
+                temp += i + ".Name: " + listCustomer[i].getName() + "\n";
+            }
+            let chooseDisplay = parseInt(prompt(temp));
+            alert("Total pay is: "+listCustomer[chooseDisplay].totalPay());
+            displayMainMenu();
+        }
+        function addNewCustomer() {
+            let checkValid = false;
+            let cus = new customer();
+            let name = prompt("Input Name: ");
+            do{
+                let birthDay = prompt("Input birthday: ");
+                if(regexBirthday.test(birthDay)){
+                    checkValid=true;
+                }else {
+                    alert("Invalid Birthday,Please Input again");
+                }
+            }while(!checkValid)
+            checkValid = false;
+            do{
+                email = prompt("Input Email: ");
+                if(regexEmail.test(email)){
+                    checkValid = true;
+                }else {
+                    alert("Invalid Email,Please input again");
+                }
+            }while(!checkValid);
+            checkValid = false;
+            do{
+                cmnd = prompt("Input CMND: ");
+                if(regexCmnd.test(cmnd)){
+                    checkValid = true;
+                }else{
+                    alert("Invalid CMND, Please input again");
+                }
+            }while(!checkValid)
+            checkValid=false;
+            let address = prompt("Input address: ");
+            let typeCustomer = prompt("Input type customer: ");
+            do{
+                discount = prompt("Input discount: ");
+                if(regexNumber.test(discount)){
+                    checkValid = true;
+                }else {
+                    alert("Invalid discount, please input again");
+                }
+            }while(!checkValid);
+            checkValid = false;
+            do{
+                quantityIncluded = prompt("Input Quantity Include: ");
+                if(regexNumber.test(quantityIncluded)){
+                    checkValid =true;
+                }else{
+                    alert("Not correct, please input again");
+                }
+            }while(!checkValid)
+            checkValid=false;
+            do{
+                rentDays = prompt("Input rentdays: ");
+                if(regexNumber.test(rentDays)){
+                    checkValid =true;
+                }else{
+                    alert("Not correct, please input again");
+                }
+            }while(!checkValid)
+            checkValid=false;
+            let typeService = prompt("Input type service: ");
+            let typeRooms = prompt("Input type rooms: ");
+            cus.setName(name);
+            cus.setBirthDay(birthDay);
+            cus.setCMND(cmnd);
+            cus.setEmail(email);
+            cus.setAddress(address);
+            cus.setTypeCustomer(typeCustomer);
+            cus.setDiscount(discount);
+            cus.setQuantityInclude(quantityIncluded);
+            cus.setRentDays(rentDays);
+            cus.setTypeService(typeService);
+            cus.setTypeRoom(typeRooms);
+            listCustomer.push(cus);
+            displayMainMenu();
+        }
+        displayMainMenu();
+    </script>
+</body>
+
+</html>

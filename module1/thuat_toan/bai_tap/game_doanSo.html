@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // let guessNumber = parseInt(prompt("Guess the number 1->100: "));
+        // let randomNum = Math.floor(Math.random() * 101);
+        // let condition = true;
+        // console.log(randomNum);
+        // while (condition) {
+        //     console.log("Run");
+        //     if (guessNumber < 1 || guessNumber > 100) {
+        //         alert("Please Guess again!!");
+        //         guessNumber = parseInt(prompt("Guess the number 1->100: "));
+        //     }else if(guessNumber < randomNum){
+        //         alert("DMM to low");
+        //         guessNumber = parseInt(prompt("Guess the number 1->100: "));
+        //     }else if(guessNumber > randomNum){
+        //         alert("DMM to high")
+        //         guessNumber = parseInt(prompt("Guess the number 1->100: "));
+        //     }
+        //     if (guessNumber == randomNum) {
+        //         alert("DMM correct")
+        //         condition = false;
+        //     }
+
+        // }
+        let number = [];
+        for (i = 1; i <= 100; i++) {
+            number.push(i);
+        }
+        let Num = parseInt(prompt("Enter a number: "));
+        console.time();
+        for (i = 0; i < number.length; i++) {
+            if (number[i] === Num) {
+                console.log("OK")
+            }
+        }
+        console.timeEnd();
+        console.time();
+        let lowerBound = 1;
+        let upperBound = number.length;
+        let midPoint = parseInt(lowerBound + (upperBound - lowerBound)/2);
+        if(number[midPoint] < Num){
+            lowerBound = midPoint + 1;
+        }else if(number[midPoint]> Num){
+            upperBound = midPoint - 1;
+        }else if(number[midPoint] = Num){
+            console.log("OK")
+        }
+        console.timeEnd();
+    </script>
+</body>
+
+</html>

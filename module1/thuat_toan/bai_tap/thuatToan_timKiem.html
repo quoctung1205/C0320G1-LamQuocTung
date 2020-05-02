@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=0, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        RegExp = /^[0]{1}[9]{1}[6]{1}[0-9]{7}$/;
+        function target(number) {
+            RegExp = /^[0]{1}[9]{1}[6]{1}[0-9]{7}$/;
+                if (RegExp.test(number)) {
+                    return console.log("found it")
+                }
+                return console.log("not found it")
+        }
+        let number = [0905155377, 782334053, 1234567890, 1141151160, 0962334053];
+        target();
+    </script>
+</body>
+
+</html>
