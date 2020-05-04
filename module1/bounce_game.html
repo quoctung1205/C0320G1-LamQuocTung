@@ -11,6 +11,11 @@
 <body onload="docReady()">
     <canvas id="myCanvas" width="500" height="500" style="border: 1px solid #d3d3d3"></canvas>
     <script>
+        var ctx = document.getElementById("myCanvas").getContext('2d');
+        function clear(){
+            console.log("OK")
+            ctx.clearRect(0, 450, 150, 500);
+        }
         function ball(coordinateX, coordinateY, radius) {
             this.coordinateX = coordinateX;
             this.coordinateY = coordinateY;
@@ -40,7 +45,6 @@
             }
         }
         var circle = new ball(50, 50, 10);
-        var ctx = document.getElementById("myCanvas").getContext('2d');
         function creatCircle() {
             ctx.beginPath();
             ctx.arc(circle.coordinateX, circle.coordinateY, circle.radius, 0, 2 * Math.PI);
@@ -68,36 +72,34 @@
                 return this.coordinateYBar;
             }
             this.moveLeft = () => {
-                clear();
                 console.log(this.heightBar);
                 this.coordinateXBar -= 5;
-                creatRectangle();
+                createRectangle();
             }
             this.moveRight = () => {
-                clear();
                 console.log(this.heightBar);
                 this.coordinateXBar += 5;
-                creatRectangle();
+                createRectangle();
             }
         }
         var rectangle = new bar(180, 450, 150, 10);
         var ctx = document.getElementById("myCanvas").getContext('2d');
-        function creatRectangle() {
+        function createRectangle() {
             ctx.rect(rectangle.coordinateXBar, rectangle.coordinateYBar, rectangle.heightBar, rectangle.wideBar);
             ctx.fill();
         }
-        creatRectangle();
-        function clear(){
-            ctx.clearRect(rectangle.coordinateXBar, rectangle.coordinateYBar, rectangle.heightBar, rectangle.wideBar);
-        }
+        createRectangle();
+        
         function moveSelection(evt) {
             switch (evt.keyCode) {
                 case 37: {
-                    rectangle.moveRight();
+                    clear();
+                    rectangle.moveLeft();
                     break;
                 }
                 case 39: {
-                    rectangle.moveLeft();
+                    clear();
+                    rectangle.moveRight();
                     break;
                 }
             }

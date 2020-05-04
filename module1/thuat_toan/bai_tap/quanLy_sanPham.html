@@ -32,14 +32,37 @@
                     editProduct();
                     break;
                 }
+                case 4: {
+                    deleteProduct();
+                    break;
+                }
                 default: {
                     alert("Failed")
                 }
             }
-            function editProduct() {
-                for(i=0;i<appInfo.length;i++){
-                    
+            function deleteProduct() {
+                let temp = "";
+                for (let i = 0; i < appInfo.length; i++) {
+                    temp += i + ".Name: " + appInfo[i][0] + "\n";
                 }
+                let chooseDelete = parseInt(prompt(temp));
+                let check = parseInt(prompt("Are you want to delete" + "\n1.Yes" + "\n2.No"));
+                if (check === 1) {
+                    appInfo.splice[chooseDelete, 1];
+                    alert("Delete success");
+                } else {
+                    alert("Cancle")
+                }
+            }
+            function editProduct() {
+                let temp = "";
+                for (i = 0; i < appInfo.length; i++) {
+                    temp += i + ".Name: " + appInfo[i][0] + "\n";
+                }
+                let chooseDisplay = parseInt(prompt(temp));
+                let chooseEdit = parseInt(prompt("1.Name" + appInfo[chooseDisplay][0]
+                    + "2.Info" + appInfo[chooseDisplay][1]));
+                alert("Delete success")
             }
             function addProduct() {
                 let name = prompt("add name product: ");
