@@ -37,11 +37,22 @@ public class TypesOfGeometry {
         }
     }
     public static void printSquareTriangle(){
+        String j = "* ";
+        String a = "";
         for(int i = 1; i <=6;i++){
-            System.out.println("* ");
+            a = a + j;
+            System.out.println(a);
         }
     }
     public static void printIsoscelesTriangle(){
-
+        int num = 6;
+        for (int i = 1; i <= num; i++){
+            for(int j = 1;j <= num - i; j++){
+                System.out.print("");
+            }
+            for (int j =1;j <= 2*i ; j++){
+                System.out.println("*");
+            }
+        }
     }
 }
