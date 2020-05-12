@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function nhanVien(Ten, soNgayLamViec, mucLuongCoBan) {
+            this.Ten = Ten;
+            this.soNgayLamViec = soNgayLamViec;
+            this.mucLuongCoBan = mucLuongCoBan;
+            this.getTen = (Ten) => {
+                return this.Ten;
+            }
+            this.getLuong = () => {
+                let Luong = this.soNgayLamViec * this.mucLuongCoBan;
+                return Luong;
+            }
+        }
+        var nhanVien1 = new nhanVien("Nguyễn Văn A",20,200000)
+        alert("Lương của nhân viên " +nhanVien1.getTen() + " là: " + nhanVien1.getLuong())
+    </script>
+</body>
+
+</html>

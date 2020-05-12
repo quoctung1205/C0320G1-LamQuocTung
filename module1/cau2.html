@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<body>
+    <script>
+        let fruit = ["Apple", "Banana", "Lemon"];
+        let fruit2 = [];
+        let index = 0;
+        function removeFruit() {
+            let inputFruit = prompt("Input fruit")
+            for (i = 0; i < fruit.length; i++) {
+                if (fruit[i] == inputFruit) {
+                    index = i;
+                    fruit2 = fruit.splice(index,1)
+                }
+            }
+            alert(fruit);
+        }
+        removeFruit()
+    </script>
+</body>
+
+</html>
