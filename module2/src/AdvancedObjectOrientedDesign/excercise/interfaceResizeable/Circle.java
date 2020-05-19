@@ -1,6 +1,6 @@
 package AdvancedObjectOrientedDesign.excercise.interfaceResizeable;
 
-public class Circle extends Shape {
+public class Circle extends Shape implements InterfaceResizeable{
     private double radius = 1.0;
 
     public Circle() {
@@ -38,4 +38,16 @@ public class Circle extends Shape {
                 + ", which is a subclass of "
                 + super.toString();
     }
+
+    @Override
+    public void resize(double percent) {
+
+        double res = radius + radius*percent/100;
+        System.out.println("Radius before resize" + radius);
+        System.out.println("Radius after resize" + res);
+
+    }
+
+
+  
 }

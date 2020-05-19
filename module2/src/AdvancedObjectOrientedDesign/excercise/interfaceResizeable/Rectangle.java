@@ -1,6 +1,6 @@
 package AdvancedObjectOrientedDesign.excercise.interfaceResizeable;
 
-public class Rectangle extends Shape {
+public class Rectangle extends Shape implements InterfaceResizeable{
     private double width = 1.0;
     private double length = 1.0;
 
@@ -50,5 +50,13 @@ public class Rectangle extends Shape {
                 + getLength()
                 + ", which is a subclass of "
                 + super.toString();
+    }
+
+    @Override
+    public void resize(double percent) {
+        double widthResize = width + width*percent/100;
+        double lengthResize = length + length*percent/100;
+        System.out.println("Before resize: " + width + " " + length);
+        System.out.println("After resize: " + widthResize + " " + lengthResize);
     }
 }
