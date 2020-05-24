@@ -1,0 +1,4 @@
+ID,NameService,Area,Price,MaximumPeople,TypeRents,StandardRoom,OtherFacility,NumberOfFloor
+12,asc,12.0,12,12,year,asc,asc,4
+asc,asc,12.0,12,12,asc,asc,asc,12
+SVHO-1997,Tung,40.0,150000,18,year,vip,asc,8

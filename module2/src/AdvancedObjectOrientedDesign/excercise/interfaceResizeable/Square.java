@@ -2,7 +2,9 @@ package AdvancedObjectOrientedDesign.excercise.interfaceResizeable;
 
 import javax.print.attribute.standard.Sides;
 
-public class Square extends Rectangle implements InterfaceResizeable{
+import AdvancedObjectOrientedDesign.practice.InterfaceColorable;
+
+public class Square extends Rectangle implements InterfaceColorable{
     public Square() {
     }
 
@@ -42,7 +44,9 @@ public class Square extends Rectangle implements InterfaceResizeable{
     }
 
     @Override
-    public void resize(double percent){
-        System.out.println("Resized");
+    public void howToColor() {
+        System.out.println("Color all for size");
     }
+
+  
 }

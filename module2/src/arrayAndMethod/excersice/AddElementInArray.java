@@ -9,8 +9,10 @@ public class AddElementInArray {
         System.out.println("Input size of Array");
         int input = Integer.parseInt(scanner.nextLine());
         int[] array = new int[input];
+        System.out.println("Input element of array");
         for (int i = 0; i < array.length;i++){
-            array[i] = 0;
+            int input2 = Integer.parseInt(scanner.nextLine());
+            array[i] = input2;
         }
         System.out.println("Input X is a number to insert: ");
         int x = Integer.parseInt(scanner.nextLine());
@@ -19,7 +21,10 @@ public class AddElementInArray {
         if(index <= 1 && index >= array.length){
             System.out.println("Can not input a number X in array");
         }
-        array[index] = x;
+        for(int i = array.length;i>=index;i--){
+            array[i-1]  = array[i];
+            array[index] = x;
+        }
         System.out.println("Array: " + Arrays.toString(array));
     }
 }
