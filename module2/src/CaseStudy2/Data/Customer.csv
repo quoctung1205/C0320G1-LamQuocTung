@@ -1,3 +1,3 @@
-Name,Day of Birth, sex, cmnd, Phone number, Email, Type Customer, Address, Service
+Name,Day of Birth," sex"," cmnd"," Phone number"," Email"," Type Customer"," Address"," Service"
 Tung,12,Man,1234,5678,Tungmail,VIP,Dang Vu Hy,
 Thao,12,Woman,1234,5678,Thaomail,VIP,Dang Vu Hy,

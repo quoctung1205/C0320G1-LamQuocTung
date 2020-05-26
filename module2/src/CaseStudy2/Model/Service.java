@@ -1,6 +1,6 @@
 package CaseStudy2.Model;
 
-public abstract class Service {
+public abstract class Service implements Comparable<Service>{
 	private String id;
 	private String nameService;
     private double Area;
@@ -67,4 +67,12 @@ public abstract class Service {
 	}
 
 	public abstract void showInfo();
+
+	
+	@Override
+	public int compareTo(Service o) {
+		return this.nameService.compareTo(o.getNameService());
+	}
+
+
 }

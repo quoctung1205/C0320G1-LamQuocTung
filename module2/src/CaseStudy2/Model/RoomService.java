@@ -32,5 +32,15 @@ public class RoomService extends Service{
 		+" Free Service" + getFreeService());
     }
 
+	@Override
+    public String toString(){
+        return "Id: " + getId()
+		+" Name Service: " + getNameService()
+		+" Area: " + getArea()
+		+" Price: " + getPrice()
+		+" Maximum People: " + getMaximumPeople()
+		+" Type rent: " + getTypeRents()
+		+" Free Service" + getFreeService();
+    }
     
 }

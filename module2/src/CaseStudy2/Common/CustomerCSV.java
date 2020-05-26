@@ -29,6 +29,8 @@ public class CustomerCSV {
             for(Customer customer: listCustomers){
                 fileWriter.append(customer.getNameCustomer());
                 fileWriter.append(COMMA_DELIMITER);
+                fileWriter.append(customer.getIdCard());
+                fileWriter.append(COMMA_DELIMITER);
                 fileWriter.append(customer.getDayOfBirth());
                 fileWriter.append(COMMA_DELIMITER);
                 fileWriter.append(customer.getSex());
@@ -80,14 +82,15 @@ public class CustomerCSV {
                 Customer customer = new Customer() {
                 };
                 customer.setNameCustomer(splitData[0]);
-                customer.setDayOfBirth(splitData[1]);
-                customer.setSex(splitData[2]);
-                customer.setCmnd(Integer.parseInt(splitData[3]));
-                customer.setPhoneNumber(Integer.parseInt(splitData[4]));
-                customer.setEmail(splitData[5]);
-                customer.setTypeCustomer(splitData[6]);
-                customer.setAddress(splitData[7]);
-                //customer.setService(splitData[8]);
+                customer.setIdCard(splitData[1]);
+                customer.setDayOfBirth(splitData[2]);
+                customer.setSex(splitData[3]);
+                customer.setCmnd(Integer.parseInt(splitData[4]));
+                customer.setPhoneNumber(Integer.parseInt(splitData[5]));
+                customer.setEmail(splitData[6]);
+                customer.setTypeCustomer(splitData[7]);
+                customer.setAddress(splitData[8]);
+                //customer.setService(splitData[9]);
                 listCumtomers.add(customer);
             }
         } catch (Exception e) {

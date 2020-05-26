@@ -5,12 +5,14 @@ import java.util.Scanner;
 
 import CaseStudy2.Common.CustomerCSV;
 import CaseStudy2.Model.Customer.Customer;
+import CaseStudy2.Model.Customer.SortNameOrYearCustomer;
 
 public class ShowCustomer {
     private ArrayList<Customer> listCustomer = new ArrayList<Customer>();
     public void showAllCustomer(){
         MainController mainController = new MainController();
         listCustomer = CustomerCSV.getFileCSVToCustomerList();
+        listCustomer.sort(new SortNameOrYearCustomer());
         for(Customer customer : listCustomer){
             System.out.println("-----------------");
             System.out.println("Name Customer: "+ customer.getNameCustomer());
@@ -23,10 +25,6 @@ public class ShowCustomer {
             System.out.println("Address: "+ customer.getAddress());
            // System.out.println("Service: "+ customer.getService();
             System.out.println("------------------");
-        }
-        System.out.println("Enter to back the main menu");
-        Scanner sc = new Scanner(System.in);
-        sc.nextLine();
-        mainController.displayMainMenu();
+        } 
     }
 }

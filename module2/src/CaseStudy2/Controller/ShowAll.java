@@ -31,10 +31,6 @@ public class ShowAll {
             System.out.println("Number of floor: "+ villaService.getNumberOfFloor());
             System.out.println("------------------");
         }
-        System.out.println("Enter to back the main menu");
-        Scanner sc = new Scanner(System.in);
-        sc.nextLine();
-        mainController.displayMainMenu();
     }
     public void showAllHouse(){
         MainController mainController = new MainController();
@@ -52,10 +48,6 @@ public class ShowAll {
             System.out.println("Number of floor: "+ houseService.getNumberOfFloor());
             System.out.println("------------------");
         }
-        System.out.println("Enter to back the main menu");
-        Scanner sc = new Scanner(System.in);
-        sc.nextLine();
-        mainController.displayMainMenu();
     }
     public void showAllRoom(){
         MainController mainController = new MainController();
@@ -71,9 +63,5 @@ public class ShowAll {
             System.out.println("Free Service: "+ roomService.getFreeService());
             System.out.println("------------------");
         }
-        System.out.println("Enter to back the main menu");
-        Scanner sc = new Scanner(System.in);
-        sc.nextLine();
-        mainController.displayMainMenu();
     }
 }

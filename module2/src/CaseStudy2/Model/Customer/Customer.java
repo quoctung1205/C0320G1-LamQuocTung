@@ -3,7 +3,8 @@ package CaseStudy2.Model.Customer;
 import CaseStudy2.Model.Service;
 
 public abstract class Customer {
-    private String nameCustomer;
+	private String nameCustomer;
+	private String idCard;
     private String dayOfBirth;
     private String sex;
     private int cmnd;
@@ -16,9 +17,10 @@ public abstract class Customer {
     public Customer(){
     }
 
-    public Customer(String nameCustomer, String dayOfBirth, String sex, int cmnd,int phoneNumber,String email,String typeCustomer,String address,Service service){
-        this.nameCustomer = nameCustomer;
-        this.dayOfBirth = dayOfBirth;
+    public Customer(String nameCustomer,String idCard, String dayOfBirth, String sex, int cmnd,int phoneNumber,String email,String typeCustomer,String address,Service service){
+		this.nameCustomer = nameCustomer;
+		this.idCard = idCard;
+		this.dayOfBirth = dayOfBirth;
         this.sex = sex;
         this.cmnd = cmnd;
         this.phoneNumber = phoneNumber;
@@ -35,6 +37,13 @@ public abstract class Customer {
 		this.nameCustomer = nameCustomer;
 	}
 
+	public String getIdCard(){
+		return this.getIdCard();
+	}
+
+	public void setIdCard(String idCatd){
+		this.idCard = idCard;
+	}
 	public String getDayOfBirth() {
 		return this.dayOfBirth;
 	}
@@ -101,6 +110,7 @@ public abstract class Customer {
     
     public void showInfo() {
 		System.out.println("Name: " + getNameCustomer()
+							+"ID Card: " + getIdCard()
 							+ "Day of Birth: " + getDayOfBirth()
 							+ "Sex: " + getSex()
 							+ "CMND: " +getCmnd()

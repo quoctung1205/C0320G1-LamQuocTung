@@ -7,7 +7,6 @@ public class HouseService extends Service{
     private int numberOfFloor;
 
 	public HouseService(String id, String nameService, double Area, long price, int maximumPeople, String typeRents,String StandardRoom,String otherFacility,int numberOfFloor) {
-		super(id, nameService, Area, price, maximumPeople, typeRents);
 		this.StandardRoom = StandardRoom;
         this.otherFacility = otherFacility;
         this.numberOfFloor = numberOfFloor;
@@ -52,6 +51,20 @@ public class HouseService extends Service{
 		+" Other Facility: " + getOtherFacility()
 		+" Number of Floor: " + getNumberOfFloor());
 	}
+
+	@Override
+	public String toString() {
+		return "Id: " + getId()
+		+" Name Service: " + getNameService()
+		+" Area: " + getArea()
+		+" Price: " + getPrice()
+		+" Maximum People: " + getMaximumPeople()
+		+" Type rent: " + getTypeRents()
+		+" Standard Room: " + getStandardRoom()
+		+" Other Facility: " + getOtherFacility()
+		+" Number of Floor: " + getNumberOfFloor();
+	}
+
 
     
 }

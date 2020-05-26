@@ -64,4 +64,18 @@ public class VillaService extends Service{
 		+" Pool Area: " +getPoolArea()
 		+" Number of Floor: " + getNumberOfFloor());
 	}
+
+	@Override
+	public String toString() {
+		return "Id: " + getId()
+		+" Name Service: " + getNameService()
+		+" Area: " + getArea()
+		+" Price: " + getPrice()
+		+" Maximum People: " + getMaximumPeople()
+		+" Type rent: " + getTypeRents()
+		+" Standard Room: " + getStandardRoom()
+		+" Other Facility: " + getOtherFacility()
+		+" Pool Area: " +getPoolArea()
+		+" Number of Floor: " + getNumberOfFloor();
+	}
 }

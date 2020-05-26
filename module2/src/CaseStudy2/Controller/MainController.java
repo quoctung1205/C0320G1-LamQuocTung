@@ -2,11 +2,16 @@ package CaseStudy2.Controller;
 
 import java.util.ArrayList;
 import java.util.Scanner;
+import java.util.TreeSet;
 
+import CaseStudy2.Common.HouseCSV;
+import CaseStudy2.Common.RoomCSV;
 import CaseStudy2.Common.VillaCSV;
+import CaseStudy2.Model.HouseService;
+import CaseStudy2.Model.NewBooking;
+import CaseStudy2.Model.RoomService;
 import CaseStudy2.Model.VillaService;
-import CaseStudy2.Model.Customer.Customer;
-import sun.applet.Main;
+
 
 public class MainController {
     public void displayMainMenu(){
@@ -32,7 +37,7 @@ public class MainController {
                 break;
             }
             case 5:{
-                //addNewBooking();
+                addNewBooking();
                 break;
             }
             case 6:{
@@ -88,21 +93,30 @@ public class MainController {
         switch (input) {
             case 1:
                 showAll.showAllVilla();
+                System.out.println("Enter to back the main menu");
+                scanner.nextLine();
+                displayMainMenu();
                 break;
             case 2:
-                showAll.showAllHouse();;
+                showAll.showAllHouse();
+                System.out.println("Enter to back the main menu");
+                scanner.nextLine();
+                displayMainMenu();
                 break;
             case 3:
                 showAll.showAllRoom();
+                System.out.println("Enter to back the main menu");
+                scanner.nextLine();
+                displayMainMenu();
                 break;
             case 4:
-                //ShowAllVillaDuplicate();
+                ShowAllVillaDuplicate();
                 break;
             case 5:
-                //ShowAllHouseDuplicate();
+                ShowAllHouseDuplicate();
                 break;
             case 6:
-                //ShowAllRoomDuplcate();
+                ShowAllRoomDuplcate();
                 break;
             case 7:
                 displayMainMenu();
@@ -116,13 +130,90 @@ public class MainController {
                 break;
         }
     }
-    public void addNewCustommer(){
+    
+    private void ShowAllRoomDuplcate() {
+        ArrayList<RoomService> room = RoomCSV.getFileCSVToRoomList();
+        TreeSet<RoomService> roomTree = new TreeSet<>();
+        for (RoomService roomService : room) {
+            roomTree.add(roomService);
+        }
+        System.out.println(roomTree); 
+        displayMainMenu();
+    }
+
+    private void ShowAllHouseDuplicate() {
+        ArrayList<HouseService> house = HouseCSV.getFileCSVToHouseList();
+        TreeSet<HouseService> houseTree = new TreeSet<>();
+        for (HouseService houseService : house) {
+            houseTree.add(houseService);
+        }
+        System.out.println(houseTree); 
+        displayMainMenu();
+    }
+
+    private void ShowAllVillaDuplicate() {
+        ArrayList<VillaService> villas = VillaCSV.getFileCSVToVillaList();
+        TreeSet<VillaService> villaTree = new TreeSet<>();
+        for (VillaService villa : villas) {
+            villaTree.add(villa);
+        }
+        System.out.println(villaTree); 
+        displayMainMenu();
+    }
+
+    public void addNewCustommer() {
         AddCustomer addCustomer = new AddCustomer();
         addCustomer.addCustomer();
     }
     public void showInformationCustomer(){
         ShowCustomer showCustomer = new ShowCustomer();
         showCustomer.showAllCustomer();
+        System.out.println("Enter to back the main menu");
+        Scanner sc = new Scanner(System.in);
+        sc.nextLine();
+        displayMainMenu();
+    }
+
+    public void addNewBooking(){
+            ShowCustomer showCustomer = new ShowCustomer();
+            AddBooking addBooking = new AddBooking();
+            NewBooking newBooking = new NewBooking();
+            Scanner scanner = new Scanner(System.in);
+            System.out.println("Choose booking type:");
+            System.out.println("1.Booking Villa");
+            System.out.println("2.Booking House");
+            System.out.println("3.Booking Room");
+            System.out.println("4.Back to main menu");
+            int input = Integer.parseInt(scanner.nextLine());
+            switch(input){
+                case 1: 
+                    System.out.println("The list Customer is: ");
+                    showCustomer.showAllCustomer();
+                    System.out.println("The list Villa is");
+                    newBooking.bookingVilla();
+                    addBooking.addBookingVilla();
+                    break;
+                case 2: 
+                    System.out.println("The list Customer is: ");
+                    showCustomer.showAllCustomer();
+                    System.out.println("The list House is");
+                    newBooking.bookingHouse();
+                    addBooking.addBookingHouse();
+                    break;
+                case 3:
+                    System.out.println("The list Customer is: ");
+                    showCustomer.showAllCustomer();
+                    System.out.println("The list Room is");
+                    newBooking.bookingRoom();
+                    addBooking.addBookingRoom();
+                    break;
+                case 4: 
+                    displayMainMenu();
+                    break;
+                default:
+                    System.out.println("Fail");
+            }
+        
     }
 
     public static void main(String[] args) {
