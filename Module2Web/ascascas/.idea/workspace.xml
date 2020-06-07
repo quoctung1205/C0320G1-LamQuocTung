@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="a12e5185-97b3-47da-9a4b-ff47ac9f8d25" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../TH2_simpleLogin/src/simpleLoginServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ThucHanh1/src/SeverTimeServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../java_web_currence_converter/src/ConverterServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../baiThucHanh1/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../baiThucHanh1/.idea/artifacts/baiThucHanh1_war_exploded.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../baiThucHanh1/.idea/codeStyles/Project.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../baiThucHanh1/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../baiThucHanh1/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../baiThucHanh1/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../baiThucHanh1/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../baiThucHanh1/baiThucHanh1.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../baiThucHanh1/out/artifacts/baiThucHanh1_war_exploded/WEB-INF/web.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../baiThucHanh1/out/artifacts/baiThucHanh1_war_exploded/index.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../baiThucHanh1/web/WEB-INF/web.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../baiThucHanh1/web/index.jsp" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeStyleSettingsInfer">
+    <option name="done" value="true" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectCodeStyleSettingsMigration">
+    <option name="version" value="1" />
+  </component>
+  <component name="ProjectId" id="1ctGkyEqOsxVWeKLhdtUgT9Fqlh" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="flattenPackages" value="true" />
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../java_web_currence_converter" />
+  </component>
+  <component name="RunManager">
+    <configuration name="Tomcat 8.5.551" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.5.551" ALTERNATIVE_JRE_ENABLED="false">
+      <deployment>
+        <artifact name="ascascas:war exploded">
+          <settings>
+            <option name="CONTEXT_PATH" value="/ascascas_war_exploded" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings />
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="Tomcat Catalina" />
+      <predefined_log_file id="Tomcat Manager" />
+      <predefined_log_file id="Tomcat Host Manager" />
+      <predefined_log_file id="Tomcat Localhost Access" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="ascascas:war exploded" />
+        </option>
+      </method>
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="a12e5185-97b3-47da-9a4b-ff47ac9f8d25" name="Default Changelist" comment="" />
+      <created>1591340622628</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1591340622628</updated>
+      <workItem from="1591340624655" duration="351000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="462" y="139" key="FileChooserDialogImpl" timestamp="1591340973553">
+      <screen x="0" y="26" width="1366" height="711" />
+    </state>
+    <state x="462" y="139" key="FileChooserDialogImpl/0.26.1366.711@0.26.1366.711" timestamp="1591340973553" />
+  </component>
+</project>

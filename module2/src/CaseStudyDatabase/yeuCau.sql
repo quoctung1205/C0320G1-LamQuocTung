@@ -119,5 +119,28 @@ delete from nhan_vien
 where nhan_vien.IDNhanVien not in (select hop_dong.IDNhanVien from hop_dong where year(hop_dong.NgayLamHopDong) between 2017 and 2019 and hop_dong.IDNhanVien = nhan_vien.IDNhanVien);
 
 /*task 17*/
-update khach_hang
-set IDLoaiKhach = 
+update khach_hang,(select  hop_dong.IDKhachHang as id, sum(hop_dong.TongTien) as tongtien from hop_dong
+where year(hop_dong.NgayLamHopDong) = 2019
+group by hop_dong.IDKhachHang
+having TongTien>1000000) as temp set khach_hang.IDLoaiKhach = (select loai_khach.IDLoaiKhach from loai_khach where loai_khach.TenLoaiKhach ='Diamond')
+where khach_hang.IDLoaiKhach = (select loai_khach.IDLoaiKhach from loai_khach where	loai_khach.TenLoaiKhach = 'Platinum')
+and temp.id = khach_hang.IDKhachHang;
+
+
+/*task 18*/
+delete khach_hang,hop_dong,hop_dong_chi_tiet from khach_hang inner join hop_dong on khach_hang.IDKhachHang = hop_dong.IDKhachHang
+inner join hop_dong_chi_tiet on hop_dong.IDHopDong = hop_dong_chi_tiet.IDHopDong
+where not exists(select hop_dong.IDHopDong where year(hop_dong.NgayLamHopDong) > 2016 and khach_hang.IDKhachHang = hop_dong.IDKhachHang);
+
+
+/*Task 19*/
+update dich_vu_di_kem inner join (select dich_vu_di_kem.TenDichVuDiKem as tendichvudikem from hop_dong_chi_tiet inner join dich_vu_di_kem
+on dich_vu_di_kem.IDDichVuDiKem = hop_dong_chi_tiet.IDDichVuDiKem
+group by dich_vu_di_kem.IDDichVuDiKem
+having count(hop_dong_chi_tiet.IDHopDongChiTiet) > 3) as temp set dich_vu_di_kem.Gia = dich_vu_di_kem.Gia*2 where dich_vu_di_kem.TenDichVuDiKem = temp.tendichvudikem;
+
+/*Task 20*/
+select nhan_vien.IDNhanVien as ID, nhan_vien.HoTen, nhan_vien.Email,nhan_vien.SDT, nhan_vien.NgaySinh, nhan_vien.DiaChi,"nhan_vien" as FromTable from nhan_vien
+union all 
+select khach_hang.IDKhachHang as ID, khach_hang.HoTen, khach_hang.Email,khach_hang.SDT,khach_hang.NgaySinh,khach_hang.DiaChi,"khach_hang" as FromTable
+from khach_hang;
