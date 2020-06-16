@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="ea18c6fd-b92d-4d76-95b2-aa2120205f5d" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../../TEST/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../TEST/.idea/artifacts/TEST_war_exploded.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../TEST/.idea/codeStyles/Project.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../TEST/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../TEST/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../TEST/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../TEST/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../TEST/TEST.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../TEST/src/Servlet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../TEST/web/WEB-INF/web.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../TEST/web/index.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../TH2_simpleLogin/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../TH2_simpleLogin/.idea/artifacts/TH2_simpleLogin_war_exploded.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../TH2_simpleLogin/.idea/codeStyles/Project.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../TH2_simpleLogin/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../TH2_simpleLogin/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../TH2_simpleLogin/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../TH2_simpleLogin/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../TH2_simpleLogin/TH2_simpleLogin.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../TH2_simpleLogin/out/artifacts/TH2_simpleLogin_war_exploded/WEB-INF/classes/simpleLoginServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../TH2_simpleLogin/out/artifacts/TH2_simpleLogin_war_exploded/WEB-INF/web.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../TH2_simpleLogin/out/artifacts/TH2_simpleLogin_war_exploded/index.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../TH2_simpleLogin/out/production/TH2_simpleLogin/simpleLoginServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../TH2_simpleLogin/src/simpleLoginServlet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../TH2_simpleLogin/web/WEB-INF/web.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../TH2_simpleLogin/web/index.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ThucHanh1/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ThucHanh1/.idea/artifacts/ThucHanh1_war_exploded.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ThucHanh1/.idea/codeStyles/Project.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ThucHanh1/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ThucHanh1/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ThucHanh1/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ThucHanh1/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ThucHanh1/ThucHanh1.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ThucHanh1/out/artifacts/ThucHanh1_war_exploded/WEB-INF/classes/SeverTimeServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ThucHanh1/out/artifacts/ThucHanh1_war_exploded/WEB-INF/web.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ThucHanh1/out/artifacts/ThucHanh1_war_exploded/index.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ThucHanh1/out/production/ThucHanh1/SeverTimeServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ThucHanh1/src/SeverTimeServlet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ThucHanh1/web/WEB-INF/web.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ThucHanh1/web/index.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ascascas/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java_web_currence_converter/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java_web_currence_converter/.idea/artifacts/java_web_currence_converter_war_exploded.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java_web_currence_converter/.idea/codeStyles/Project.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java_web_currence_converter/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java_web_currence_converter/.idea/libraries/apache_tomcat_8_5.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java_web_currence_converter/.idea/libraries/taglibs_standard_impl_1_2_5.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java_web_currence_converter/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java_web_currence_converter/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java_web_currence_converter/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java_web_currence_converter/java_web_currence_converter.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java_web_currence_converter/out/artifacts/java_web_currence_converter_war_exploded/WEB-INF/classes/ConverterServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java_web_currence_converter/out/artifacts/java_web_currence_converter_war_exploded/WEB-INF/web.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java_web_currence_converter/out/artifacts/java_web_currence_converter_war_exploded/index.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java_web_currence_converter/out/production/java_web_currence_converter/ConverterServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java_web_currence_converter/src/ConverterServlet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java_web_currence_converter/web/WEB-INF/web.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java_web_currence_converter/web/index.jsp" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeStyleSettingsInfer">
+    <option name="done" value="true" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+        <option value="Interface" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="ProjectCodeStyleSettingsMigration">
+    <option name="version" value="1" />
+  </component>
+  <component name="ProjectId" id="1d1FT3Mpk6UuVMii4KbDfigQvlQ" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="flattenPackages" value="true" />
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../MVC/listCustomer" />
+  </component>
+  <component name="RunManager">
+    <configuration name="Tomcat 8.5.551" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.5.551" ALTERNATIVE_JRE_ENABLED="false">
+      <deployment>
+        <artifact name="listCustomer:war exploded">
+          <settings>
+            <option name="CONTEXT_PATH" value="/listCustomer_war_exploded" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings />
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="Tomcat Catalina" />
+      <predefined_log_file id="Tomcat Manager" />
+      <predefined_log_file id="Tomcat Host Manager" />
+      <predefined_log_file id="Tomcat Localhost Access" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="listCustomer:war exploded" />
+        </option>
+      </method>
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ea18c6fd-b92d-4d76-95b2-aa2120205f5d" name="Default Changelist" comment="" />
+      <created>1591584696523</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1591584696523</updated>
+      <workItem from="1591584698194" duration="1453000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="491" y="60" width="374" height="642" key="#com.intellij.ide.util.MemberChooser" timestamp="1591585336930">
+      <screen x="0" y="26" width="1366" height="711" />
+    </state>
+    <state x="491" y="60" width="374" height="642" key="#com.intellij.ide.util.MemberChooser/0.26.1366.711@0.26.1366.711" timestamp="1591585336930" />
+    <state x="462" y="139" key="FileChooserDialogImpl" timestamp="1591586409811">
+      <screen x="0" y="26" width="1366" height="711" />
+    </state>
+    <state x="462" y="139" key="FileChooserDialogImpl/0.26.1366.711@0.26.1366.711" timestamp="1591586409811" />
+  </component>
+</project>
